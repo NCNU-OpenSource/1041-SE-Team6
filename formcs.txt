@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.IO.Ports;
+using System.Threading;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
+namespace WindowsFormsApplication3
+{
+    public partial class Form1 : Form
+    {
+        SqlCommand cmd;
+        SqlConnection con;
+        SqlDataAdapter da;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            con = new SqlConnection(@"Data Source = COMPUTER\SQLEXPRESS; Initial Catalog = test; Integrated Security = True");
+            con.Open();
+            cmd = new SqlCommand("INSERT INTO numofpeople (datime,num) VALUES (@datime,@num)",con);
+
+            cmd.Parameters.AddWithValue("@datime", DateTime.Now.ToString("yyyyMMddHH"));
+            cmd.Parameters.AddWithValue("@num", textBox2.Text);
+
+            cmd.ExecuteNonQuery();
+            textBox1.Text = DateTime.Now.ToString("yyyyMMddHH");
+            array[0]=Int32.Parse(this.textBox2.Text);
+            MessageBox.Show(array[0].ToString());
+            for (int i = 9; i>0; i--)
+             {
+                array[i] = array[i-1];
+            }
+
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+
+            //標題 最大數值
+            Series series1 = new Series("人數折線", 1000);
+
+            //設定線條顏色
+            series1.Color = Color.Blue;
+
+            //設定字型
+            series1.Font = new System.Drawing.Font("新細明體", 12);
+
+            //折線圖
+            series1.ChartType = SeriesChartType.Line;
+
+            //將數值顯示在線上
+            series1.IsValueShownAsLabel = true;
+
+
+            //將數值新增至序列
+            for (int index = 0; index < 10; index++)
+            {
+                series1.Points.AddXY(index + 1, array[index]);
+            }
+
+            //將序列新增到圖上
+            this.chart1.Series.Add(series1);
+
+            //標題
+            this.chart1.Titles.Add("人數");
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
