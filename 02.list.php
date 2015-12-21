@@ -14,34 +14,73 @@ h1 {padding:5px;  text-align: center}
 
 
  body {
-  width: 450px;
- margin:200px auto;
- font-size:14pt;
+  width: 380px ;
+ margin:175px auto;
+ 
  }
-
+  
+ .shop{
+position:absolute;
+}
+.ctrl{
+position:absolute;
+}
+.people{
+position:absolute;
+}
+.coin{
+position:absolute;
+}
+.love{
+position:absolute;
+}
 </style>
+<script type="text/javascript">
+window.onload=function() {
+    shop.style.top=30+"px";
+    shop.style.left=900+"px";
+	ctrl.style.top=30+"px";
+    ctrl.style.left=1000+"px";
+	people.style.top=30+"px";
+    people.style.left=50+"px";
+	coin.style.top=30+"px";
+    coin.style.left=600+"px";
+	love.style.top=30+"px";
+    love.style.left=450+"px";
+};
+</script>
+
+
+
+
 <body  style="background-color:#63FF63" >
+
+<a href="shop.php"><img id="shop" src="shop.png" class="shop" height="100" width="100"></a>
+<a href="login.php"><img id="ctrl" src="ctrl.png" class="ctrl" height="100" width="100"></a>
+<img id="people" src="people.png" class="people" height="100" width="100">
+<img id="coin" src="coin.jpg" class="coin" height="50" width="50">
+<img id="love" src="love.png" class="love" height="50" width="50">
 
 
 <div id="content">
 <table>
   <tr>
-    <td><img src="p2.png" alt="田" height="100" width="100"/>  </td> 	
-    <td><img src="p2.png" alt="田" height="100" width="100"/>  </td>
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td> 	 
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
+    <td><img src="p2.png" alt="田" height="80" width="80"/>  </td> 	
+    <td><img src="p2.png" alt="田" height="80" width="80"/>  </td>
+    <td><img src="p3.png" alt="草" height="80" width="80"/>  </td> 	 
+    <td><img src="p3.png" alt="草" height="80" width="80"/>  </td>
    </tr>
    <tr>
-    <td><img src="p2.png" alt="田" height="100" width="100"/>  </td> 	
-    <td><img src="p2.png" alt="田" height="100" width="100"/>  </td>
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td> 	 
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
+    <td><img src="p2.png" alt="田" height="80" width="80"/>  </td> 	
+    <td><img src="p2.png" alt="田" height="80" width="80"/>  </td>
+    <td><img src="p3.png" alt="草" height="80" width="80"/>  </td> 	 
+    <td><img src="p3.png" alt="草" height="80" width="80"/>  </td>
    </tr>
 	<tr>
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td> 	
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td> 	 
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
+    <td><img src="p3.png" alt="草" height="80" width="80"/>  </td> 	
+    <td><img src="p3.png" alt="草" height="80" width="80"/>  </td>
+    <td><img src="p3.png" alt="草" height="80" width="80"/>  </td> 	 
+    <td><img src="p3.png" alt="草" height="80" width="80"/>  </td>
    </tr>
    
 <?php
@@ -54,7 +93,7 @@ $results2=mysqli_query($conn,$sql2);//跟sql2指令連結
 </table>
 </div>
 
-<p><a href="login.php">登出</a> </p>
+
 
 
 </html>
