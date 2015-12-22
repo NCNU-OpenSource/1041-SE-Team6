@@ -11,7 +11,10 @@ require("config.php");
 </head>
 <style type="text/css">
 h1 {padding:5px;  text-align: center}
-
+#lovecount{position:absolute;top: 40px;left:535px;font-size: 20pt}
+#coincount{position:absolute;top: 40px;left:680px;font-size: 20pt}
+#level{position:absolute;top: 40px;left:210px;font-size: 20pt}
+#lv{position:absolute;top: 40px;left:155px;font-size: 20pt}
 
  body {
   width: 380px ;
@@ -36,18 +39,34 @@ position:absolute;
 }
 </style>
 <script type="text/javascript">
+
+var lovecount="5";
+var coincount="100";
+var level="1";
+
 window.onload=function() {
     shop.style.top=30+"px";
     shop.style.left=900+"px";
 	ctrl.style.top=30+"px";
     ctrl.style.left=1000+"px";
-	people.style.top=30+"px";
+	people.style.top=10+"px";
     people.style.left=50+"px";
 	coin.style.top=30+"px";
     coin.style.left=600+"px";
 	love.style.top=30+"px";
     love.style.left=450+"px";
+	document.getElementById("lovecount").innerHTML=lovecount;
+	document.getElementById("coincount").innerHTML=coincount;
+	document.getElementById("level").innerHTML=level;
+
 };
+
+
+
+
+document.getElementById("lovecount").innerHTML=lovecount;
+document.getElementById("coincount").innerHTML=coincount;
+document.getElementById("level").innerHTML=level;
 </script>
 
 
@@ -61,7 +80,13 @@ window.onload=function() {
 <img id="coin" src="coin.jpg" class="coin" height="50" width="50">
 <img id="love" src="love.png" class="love" height="50" width="50">
 
-
+<div id="lovecount">
+</div>
+<div id="coincount">
+</div>
+<div id="level">
+</div>
+<div id="lv">LV.</div>
 <div id="content">
 <table>
   <tr>
