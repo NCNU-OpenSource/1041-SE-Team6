@@ -6,90 +6,71 @@ require("config.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>商店</title>
 </head>
-<style type="text/css">
-#lovecount{position:absolute;top: 40px;left:535px;font-size: 20pt}
-#coincount{position:absolute;top: 40px;left:680px;font-size: 20pt}
-#level{position:absolute;top: 40px;left:210px;font-size: 20pt}
-#lv{position:absolute;top: 40px;left:155px;font-size: 20pt}
 
-body {
-width:500 ;
-margin:175px auto;
-}
-.shop{
-position:absolute;
-}
-.ctrl{
-position:absolute;
-}
-.people{
-position:absolute;
-}
-.coin{
-position:absolute;
-}
-.love{
-position:absolute;
-}
-</style>
-<script type="text/javascript">
-var lovecount="5";
-var coincount="100";
-var level="1";
+<body>
 
-window.onload=function() {
-    shop.style.top=30+"px";
-    shop.style.left=900+"px";
-	ctrl.style.top=30+"px";
-    ctrl.style.left=1000+"px";
-	people.style.top=10+"px";
-    people.style.left=50+"px";
-	coin.style.top=30+"px";
-    coin.style.left=600+"px";
-	love.style.top=30+"px";
-    love.style.left=450+"px";
-	document.getElementById("lovecount").innerHTML=lovecount;
-	document.getElementById("coincount").innerHTML=coincount;
-	document.getElementById("level").innerHTML=level;
-};
-document.getElementById("lovecount").innerHTML=lovecount;
-document.getElementById("coincount").innerHTML=coincount;
-document.getElementById("level").innerHTML=level;
-</script>
-
-<body style="background-color:#63FF63">
-<a href="shop.php"><img id="shop" src="shop.png" alt="shop" class="shop" height="100" width="100"></a>
-<a href="login.php"><img id="ctrl" src="ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
-<img id="people" src="people.png" alt="people" class="people" height="100" width="100">
-<img id="coin" src="coin.jpg" alt="coin" class="coin" height="50" width="50">
-<img id="love" src="love.png" alt="love" class="love" height="50" width="50">
-<div id="lovecount">
-</div>
-<div id="coincount">
-</div>
-<div id="level">
-</div>
-<div id="lv">LV.</div>
-
-<div id="mainshop">
-<table  border="1" width="500">
-<caption><big>商店</big></caption>
+<table border="1" width="500">
 <tr>
-	<th>物品圖樣</th>
-	<th>生命數</th>
-	<th>金錢</th>
-	<th>經驗值</th>
-	<th>點選</th>
+	<th colspan="5">商店</th>
 </tr>
+<tr>
+	<td><img src="land.png" alt="land" height="80" width="80"></td>
+	<td>	</td>
+	<td><img src="coin.png" alt="coin" height="80" width="80">-50</td>
+	<td>	</td>
+	<td>購買</td>
+<tr/>
 <tr>
 	<td><img src="carrot.png" alt="carrot" height="80" width="80"></td>
 	<td><img src="love.png" alt="love" height="60" width="60"> -1</td>
 	<td><img src="coin.png" alt="coin" height="80" width="80">-20</td>
 	<td><img src="exp.png" alt="exp" height="80" width="80">+30</td>
-	<td></td>
+	<td>購買</td>
 <tr/>
+<tr>
+	<td><img src="mushroom.png" alt="mushroom" height="80" width="80"></td>
+	<td><img src="love.png" alt="love" height="60" width="60"> -1</td>
+	<td><img src="coin.png" alt="coin" height="80" width="80">-40</td>
+	<td><img src="exp.png" alt="exp" height="80" width="80">+50</td>
+	<td>購買</td>
+<tr/>
+<tr>
+	<td><img src="eggplant.png" alt="eggplant" height="80" width="80"></td>
+	<td><img src="love.png" alt="love" height="60" width="60"> -1</td>
+	<td><img src="coin.png" alt="coin" height="80" width="80">-40</td>
+	<td><img src="exp.png" alt="exp" height="80" width="80">+60</td>
+	<td>購買</td>
+<tr/>
+<tr>
+	<td><img src="corn.png" alt="corn" height="80" width="80"></td>
+	<td><img src="love.png" alt="love" height="60" width="60"> -1</td>
+	<td><img src="coin.png" alt="coin" height="80" width="80">-50</td>
+	<td><img src="exp.png" alt="exp" height="80" width="80">+80</td>
+	<td>購買</td>
+<tr/>
+<tr>
+	<td><img src="meat.png" alt="meat" height="80" width="80"></td>
+	<td><img src="love.png" alt="love" height="60" width="60"> +1</td>
+	<td><img src="coin.png" alt="coin" height="80" width="80">-50</td>
+	<td>	</td>
+	<td>購買</td>
+<tr/>
+<?php
+$sql = "select * from user;";
+$results=mysqli_query($conn,$sql);
+if ($rs=mysqli_fetch_array($results)) {
+?>
+<tr>
+	<td>NT: <?php echo $rs['cashinhand']; ?></td>
+	<td colspan="3"> </td>
+	<td><a href="02.list.php"><img src="homeicon.png" alt="homeicon" height="50" width="50"></td>
+</tr>
+<?php
+}
+?>
 </table>
-</div>
+
+
 
 </body>
 </html>
