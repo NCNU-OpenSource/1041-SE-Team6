@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `password`, `cashinhand`) VALUES
-('userT', '9999', 1000);
+('userT', '9999', 100);
 
 --
 -- 已匯出資料表的索引
