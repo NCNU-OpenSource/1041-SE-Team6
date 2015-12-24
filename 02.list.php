@@ -103,8 +103,8 @@ document.getElementById("level").innerHTML=level;
 <img id="people" src="people.png" alt="people" class="people" height="100" width="100">
 <img id="coin" src="coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="love.png" alt="love" class="love" height="50" width="50">
-<div id="package"  >
-<img id="opener" src="package.jpg" alt="package" class="package" height="150" width="150">
+<div id="package">
+<img id="opener" src="package.png" alt="package" class="package" height="150" width="150">
 </div>
 <div id="progressbar" style="width:50%" ></div>
 
