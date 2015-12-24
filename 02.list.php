@@ -108,11 +108,68 @@ document.getElementById("level").innerHTML=level;
 </div>
 <div id="progressbar" style="width:50%" ></div>
 
-<div id="dialog" title="Basic dialog">
-
-  <p>哈哈哈哈</p>
-  
-  
+<div id="dialog" title="背包">
+<table>
+<tr>
+	<td><img src="carrot.png" alt="carrot" height="70" width="70"></br>
+	數量：
+	<?php
+	$sql = "select * from package where id='1';";
+	$results=mysqli_query($conn,$sql);
+	if ($rs=mysqli_fetch_array($results)) {
+		echo $rs['qty'];
+	}
+	?></br>
+	使用
+	</td>
+	<td><img src="mushroom.png" alt="mushroom" height="70" width="70"></br>
+	數量：
+	<?php
+	$sql = "select * from package where id='2';";
+	$results=mysqli_query($conn,$sql);
+	if ($rs=mysqli_fetch_array($results)) {
+		echo $rs['qty'];
+	}
+	?></br>
+	使用
+	</td>
+	<td><img src="eggplant.png" alt="eggplant" height="70" width="70"></br>
+	數量：
+	<?php
+	$sql = "select * from package where id='3';";
+	$results=mysqli_query($conn,$sql);
+	if ($rs=mysqli_fetch_array($results)) {
+		echo $rs['qty'];
+	}
+	?></br>
+	使用
+	</td>
+</tr>
+<tr>
+	<td><img src="corn.png" alt="corn" height="70" width="70"></br>
+	數量：
+	<?php
+	$sql = "select * from package where id='4';";
+	$results=mysqli_query($conn,$sql);
+	if ($rs=mysqli_fetch_array($results)) {
+		echo $rs['qty'];
+	}
+	?></br>
+	使用
+	</td>
+	<td><img src="meat.png" alt="meat" height="70" width="70"></br>
+	數量：
+	<?php
+	$sql = "select * from package where id='5';";
+	$results=mysqli_query($conn,$sql);
+	if ($rs=mysqli_fetch_array($results)) {
+		echo $rs['qty'];
+	}
+	?></br>
+	使用
+	</td>
+</tr>
+</table>  
   
 </div>
  
@@ -155,9 +212,5 @@ $results2=mysqli_query($conn,$sql2);//跟sql2指令連結
 ?>
 </body>
 </table>
-
-
-
-
 
 </html>
