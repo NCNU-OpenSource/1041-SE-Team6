@@ -23,32 +23,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `user`
+-- 資料表結構 `package`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` varchar(15) COLLATE utf8_bin NOT NULL,
-  `password` varchar(15) COLLATE utf8_bin NOT NULL,
-  `cashinhand` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+CREATE TABLE IF NOT EXISTS `package` (
+  `id` int(11) NOT NULL,
+  `item_name` varchar(20) NOT NULL,
+  `item_price` int(11) NOT NULL,
+  `item_hp` int(11) NOT NULL,
+  `item_exp` int(11) NOT NULL,
+  `qty` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
--- 資料表的匯出資料 `user`
+-- 資料表的匯出資料 `package`
 --
 
-INSERT INTO `user` (`id`, `password`, `cashinhand`) VALUES
-('userT', '9999', 100);
+INSERT INTO `package` (`id`, `item_name`, `item_price`, `item_hp`, `item_exp`, `qty`) VALUES
+(1, 'carrot', 20, 1, 30, 0),
+(2, 'mushroom', 40, 1, 50, 0),
+(3, 'eggplant', 40, 1, 60, 0),
+(4, 'corn', 50, 1, 80, 0),
+(5, 'meat', 50, 1, 0, 0);
 
 --
 -- 已匯出資料表的索引
 --
 
 --
--- 資料表索引 `user`
+-- 資料表索引 `package`
 --
-ALTER TABLE `user`
+ALTER TABLE `package`
   ADD PRIMARY KEY (`id`);
 
+--
+-- 在匯出的資料表使用 AUTO_INCREMENT
+--
+
+--
+-- 使用資料表 AUTO_INCREMENT `package`
+--
+ALTER TABLE `package`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
