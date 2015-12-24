@@ -93,7 +93,7 @@ if ($rs=mysqli_fetch_array($results)) {
 </table>
 <div id="menu"  >
 	<p><h1><img src="coin.png" alt="coin" height="100" width="100"></h1></p>
-	<p><h1><?php echo $rs['cashinhand']; ?></h1> </p>
+	<p><h1>NT <?php echo $rs['cashinhand']; ?></h1> </p>
 	<p><h1><a href="02.list.php"><img src="package.jpg" alt="package" height="100" width="100"></h1></p>
 	<p><h1><a href="02.list.php"><img src="homeicon.png" alt="homeicon" height="100" width="100"></h1></p>
     
