@@ -18,8 +18,9 @@ h1 {padding:5px;  text-align: center}
 #coincount{position:absolute;top: 40px;left:680px;font-size: 20pt}
 #level{position:absolute;top: 40px;left:210px;font-size: 20pt}
 #lv{position:absolute;top: 40px;left:155px;font-size: 20pt}
-#progressbar{position:relative;top:-280px;left:-250px;font-size: 10pt; }
-#package{position:relative;top:100px;left:-300px; }
+#progressbar{position:fixed;top:40px;left:240px;font-size: 10pt; }
+#package{position:fixed;top:300px;left:200px; }
+
  body {
   width: 380px ;
  margin:175px auto; 
@@ -40,12 +41,11 @@ position:absolute;
 .love{
 position:absolute;
 }
-
 </style>
 <script type="text/javascript">
-var lovecount="5";
-var coincount="100";
-var level="1";
+
+
+
 window.onload=function() {
     shop.style.top=30+"px";
     shop.style.left=900+"px";
@@ -58,13 +58,13 @@ window.onload=function() {
 	love.style.top=30+"px";
     love.style.left=450+"px";
 	
-	document.getElementById("lovecount").innerHTML=lovecount;
-	document.getElementById("coincount").innerHTML=coincount;
-	document.getElementById("level").innerHTML=level;
+	
+	
+	
 };
-document.getElementById("lovecount").innerHTML=lovecount;
-document.getElementById("coincount").innerHTML=coincount;
-document.getElementById("level").innerHTML=level;
+
+
+
 </script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -72,7 +72,16 @@ document.getElementById("level").innerHTML=level;
   <script>
   $(function() {
     $( "#progressbar" ).progressbar({
-      value: 50
+		
+		<?php
+       $sql = "select * from user;";
+       $results=mysqli_query($conn,$sql);
+       if ($rs=mysqli_fetch_array($results)) {
+       ?>
+      value: <?php echo $rs['exp']; ?>
+	  <?php
+	   }
+	    ?>
     });
   });
   
@@ -80,7 +89,8 @@ document.getElementById("level").innerHTML=level;
     $( "#dialog" ).dialog({
       autoOpen: false,
       show: {
-        effect: "blind",        
+        effect: "blind", 
+		
       },
       hide: {
         effect: "blind",       
@@ -103,15 +113,17 @@ document.getElementById("level").innerHTML=level;
 <img id="people" src="people.png" alt="people" class="people" height="100" width="100">
 <img id="coin" src="coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="love.png" alt="love" class="love" height="50" width="50">
-<div id="package">
-<img id="opener" src="package.png" alt="package" class="package" height="150" width="150">
+
+<div id="package"  >
+<img id="opener" src="package.jpg" alt="package" class="package" height="150" width="150">
 </div>
-<div id="progressbar" style="width:50%" ></div>
+
+<div id="progressbar" style="width:180px" ></div>
 
 <div id="dialog" title="背包">
 <table>
 <tr>
-	<td><img src="carrot.png" alt="carrot" height="70" width="70"></br>
+	<td><img src="carrot.png" alt="carrot" height="100" width="100"></br>
 	數量：
 	<?php
 	$sql = "select * from package where id='1';";
@@ -119,10 +131,17 @@ document.getElementById("level").innerHTML=level;
 	if ($rs=mysqli_fetch_array($results)) {
 		echo $rs['qty'];
 	}
-	?></br>
-	使用
+	?>
+	</br>
+	<?php
+	$sqlc = "select * from package where id='1';";
+	$results=mysqli_query($conn,$sqlc);
+	if ($rs=mysqli_fetch_array($results)) {
+	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
+	}
+	?>	
 	</td>
-	<td><img src="mushroom.png" alt="mushroom" height="70" width="70"></br>
+	<td><img src="mushroom.png" alt="mushroom" height="100" width="100"></br>
 	數量：
 	<?php
 	$sql = "select * from package where id='2';";
@@ -131,9 +150,15 @@ document.getElementById("level").innerHTML=level;
 		echo $rs['qty'];
 	}
 	?></br>
-	使用
+	<?php
+	$sqlc = "select * from package where id='2';";
+	$results=mysqli_query($conn,$sqlc);
+	if ($rs=mysqli_fetch_array($results)) {
+	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
+	}
+	?>	
 	</td>
-	<td><img src="eggplant.png" alt="eggplant" height="70" width="70"></br>
+	<td><img src="eggplant.png" alt="eggplant" height="100" width="100"></br>
 	數量：
 	<?php
 	$sql = "select * from package where id='3';";
@@ -142,11 +167,16 @@ document.getElementById("level").innerHTML=level;
 		echo $rs['qty'];
 	}
 	?></br>
-	使用
+	<?php
+	$sqlc = "select * from package where id='3';";
+	$results=mysqli_query($conn,$sqlc);
+	if ($rs=mysqli_fetch_array($results)) {
+	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
+	}
+	?>	
 	</td>
-</tr>
-<tr>
-	<td><img src="corn.png" alt="corn" height="70" width="70"></br>
+
+	<td><img src="corn.png" alt="corn" height="100" width="100"></br>
 	數量：
 	<?php
 	$sql = "select * from package where id='4';";
@@ -155,9 +185,15 @@ document.getElementById("level").innerHTML=level;
 		echo $rs['qty'];
 	}
 	?></br>
-	使用
+	<?php
+	$sqlc = "select * from package where id='4';";
+	$results=mysqli_query($conn,$sqlc);
+	if ($rs=mysqli_fetch_array($results)) {
+	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
+	}
+	?>	
 	</td>
-	<td><img src="meat.png" alt="meat" height="70" width="70"></br>
+	<td><img src="meat.png" alt="meat" height="100" width="100"></br>
 	數量：
 	<?php
 	$sql = "select * from package where id='5';";
@@ -166,7 +202,13 @@ document.getElementById("level").innerHTML=level;
 		echo $rs['qty'];
 	}
 	?></br>
-	使用
+	<?php
+	$sqlc = "select * from package where id='5';";
+	$results=mysqli_query($conn,$sqlc);
+	if ($rs=mysqli_fetch_array($results)) {
+	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
+	}
+	?>	
 	</td>
 </tr>
 </table>  
@@ -175,12 +217,28 @@ document.getElementById("level").innerHTML=level;
  
 
 
-<div id="lovecount">
-</div>
+
+
+<?php
+$sql = "select * from user;";
+$results=mysqli_query($conn,$sql);
+if ($rs=mysqli_fetch_array($results)) {
+?>
 <div id="coincount">
+<?php echo $rs['cashinhand']; ?>
+</div>
+<div id="lovecount">
+<?php echo $rs['lovecount']; ?>
 </div>
 <div id="level">
+<?php echo $rs['level']; ?>
 </div>
+
+<?php
+}
+?>
+
+
 <div id="lv">LV.</div>
 <div id="content">
 <table>
