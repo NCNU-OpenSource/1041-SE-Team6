@@ -110,10 +110,25 @@ h1 { text-align: center}
 	<td><h1><img src="meat.png" alt="meat" height="80" width="80">   </h1></td>
 	<td><h1><img src="love.png" alt="love" height="60" width="60"> +1</h1></td>
 	<td><h1><img src="coin.png" alt="coin" height="80" width="80">-50</h1></td>
-	<td><h1>	</h1></td>
+	<td>	</td>
 	<td><h1>50元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='5';";
+	$results=mysqli_query($conn,$sqlc);
+	if ($rs=mysqli_fetch_array($results)) {
+	echo"<td><h1><a href='up_package.php?id=",$rs['id'],"'>購買</a></h1></td>";
+	}
+	?>
+	
+<tr/>
+<tr>
+	<td><h1><img src="land.png" alt="land" height="80" width="80">   </h1></td>
+	<td>	</td>
+	<td><h1><img src="coin.png" alt="coin" height="80" width="80">-50</h1></td>
+	<td>	</td>
+	<td>	</td>
+	<?php
+	$sqlc = "select * from package where id='6';";
 	$results=mysqli_query($conn,$sqlc);
 	if ($rs=mysqli_fetch_array($results)) {
 	echo"<td><h1><a href='up_package.php?id=",$rs['id'],"'>購買</a></h1></td>";
@@ -179,13 +194,24 @@ if ($rs=mysqli_fetch_array($results)) {
 	if ($rs=mysqli_fetch_array($results)) {
 		echo $rs['qty'];
 	}
-	?></br>
+	?></td>
 	
 	
 	<td><img src="meat.png" alt="meat" height="100" width="100"></br>
 	數量：
 	<?php
 	$sql = "select * from package where id='5';";
+	$results=mysqli_query($conn,$sql);
+	if ($rs=mysqli_fetch_array($results)) {
+		echo $rs['qty'];
+	}
+	?>
+	</td>
+	
+	<td><img src="land.png" alt="land" height="100" width="100"></br>
+	數量：
+	<?php
+	$sql = "select * from package where id='6';";
 	$results=mysqli_query($conn,$sql);
 	if ($rs=mysqli_fetch_array($results)) {
 		echo $rs['qty'];

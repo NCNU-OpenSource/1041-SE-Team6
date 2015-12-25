@@ -222,6 +222,23 @@ if($rsu['exp']>=100){
 	}
 	?>	
 	</td>
+	<td><img src="land.png" alt="land" height="100" width="100"></br>
+	數量：
+	<?php
+	$sql = "select * from package where id='6';";
+	$results=mysqli_query($conn,$sql);
+	if ($rs=mysqli_fetch_array($results)) {
+		echo $rs['qty'];
+	}
+	?></br>
+	<?php
+	$sqlc = "select * from package where id='6';";
+	$results=mysqli_query($conn,$sqlc);
+	if ($rs=mysqli_fetch_array($results)) {
+	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
+	}
+	?>	
+	</td>
 </tr>
 </table>  
   
