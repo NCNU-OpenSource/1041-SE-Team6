@@ -107,7 +107,19 @@ window.onload=function() {
 
 
 <body  style="background-color:#63FF63" >
-
+<?php
+$sqluser = "select * from user ;";
+$rsuser=mysqli_query($conn,$sqluser);
+$rsu=mysqli_fetch_array($rsuser);
+	
+if($rsu['exp']>=100){
+	$sql ="update user set level=level+'1';";
+	mysqli_query($conn,$sql) or die("MySQL query error"); 
+	$sql ="update user set exp=exp-'100';";
+	mysqli_query($conn,$sql) or die("MySQL query error");
+	header("Location: 02.list.php");
+}
+?>
 <a href="shop.php"><img id="shop" src="shop.png" alt="shop" class="shop" height="100" width="100"></a>
 <a href="login.php"><img id="ctrl" src="ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
 <img id="people" src="people.png" alt="people" class="people" height="100" width="100">
@@ -115,7 +127,7 @@ window.onload=function() {
 <img id="love" src="love.png" alt="love" class="love" height="50" width="50">
 
 <div id="package"  >
-<img id="opener" src="package.jpg" alt="package" class="package" height="150" width="150">
+<img id="opener" src="package.png" alt="package" class="package" height="150" width="150">
 </div>
 
 <div id="progressbar" style="width:180px" ></div>
