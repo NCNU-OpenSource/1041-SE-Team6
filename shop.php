@@ -145,7 +145,7 @@ if ($rs=mysqli_fetch_array($results)) {
 <div id="menu"  >
 	<p><h1><img src="coin.png" alt="coin" height="150" width="150"></h1></p>
 	<p><h1>NT <?php echo $rs['cashinhand']; ?></h1> </p>
-	<p><h1><img id="opener" src="package.jpg" alt="package" class="package" height="150" width="150"></h1></p>
+	<p><h1><img id="opener" src="package.png" alt="package" class="package" height="150" width="150"></h1></p>
 	<p><h1><a href="02.list.php"><img src="homeicon.png" alt="homeicon" height="150" width="150"></h1></p>
     
 	</div>
