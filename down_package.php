@@ -49,6 +49,9 @@ if($rsp['id']=6&&($rsp['qty']>=1)){
 		header("Location: 02.list.php");
 }
 
+else{
+	header("Location: 02.list.php");
+}
 
 	
 ?>
