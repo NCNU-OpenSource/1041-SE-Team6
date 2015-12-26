@@ -12,8 +12,9 @@ require("config.php");
 
 </head>
 <style type="text/css">
+
 h1 { text-align: center}
-#menu{position:absolute;top:100px;left:1000px; }
+#menu{position:absolute;top:40px;left:1100px; }
 </style>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -39,22 +40,14 @@ h1 { text-align: center}
   
 </script>
 
-<body>
-<table  width="800" >
+<body style="background-image:url(p4.jpg)">
+<table  width="950" height="100">
+
 <tr>
-	<td><h1>商品</h1></td>
-	<td><h1>體力</h1></td>
-	<td><h1>價錢</h1></td>
-	<td><h1>經驗</h1></td>
-	<td><h1>出售價</h1></td>
-	<td><h1>是否購買</h1></td>
-	
-<tr/>
-<tr>
-	<td><h1><img src="carrot.png" alt="carrot" height="80" width="80">10秒</h1></td>
-	<td><h1><img src="love.png" alt="love" height="60" width="60"> -1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="80" width="80">-20</h1></td>
-	<td><h1><img src="exp.png" alt="exp" height="80" width="80">+30</h1></td>
+	<td><h1><img src="carrot.png" alt="carrot" height="50" width="50">10秒</h1></td>
+	<td><h1><img src="love.png" alt="love" height="50" width="50"> -1</h1></td>
+	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-20</h1></td>
+	<td><h1><img src="exp.png" alt="exp" height="50" width="50">+30</h1></td>
 	<td><h1>30元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='1';";
@@ -65,10 +58,10 @@ h1 { text-align: center}
 	?>	
 <tr/>
 <tr>
-	<td><h1><img src="mushroom.png" alt="mushroom" height="80" width="80">30秒</h1></td>
-	<td><h1><img src="love.png" alt="love" height="60" width="60"> -1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="80" width="80">-40</h1></td>
-	<td><h1><img src="exp.png" alt="exp" height="80" width="80">+50</h1></td>
+	<td><h1><img src="mushroom.png" alt="mushroom" height="50" width="50">30秒</h1></td>
+	<td><h1><img src="love.png" alt="love" height="50" width="50"> -1</h1></td>
+	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-40</h1></td>
+	<td><h1><img src="exp.png" alt="exp" height="50" width="50">+50</h1></td>
 	<td><h1>60元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='2';";
@@ -79,10 +72,10 @@ h1 { text-align: center}
 	?>
 <tr/>
 <tr>
-	<td><h1><img src="eggplant.png" alt="eggplant" height="80" width="80">50秒</h1></td>
-	<td><h1><img src="love.png" alt="love" height="60" width="60"> -1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="80" width="80">-40</h1></td>
-	<td><h1><img src="exp.png" alt="exp" height="80" width="80">+60</h1></td>
+	<td><h1><img src="eggplant.png" alt="eggplant" height="50" width="50">50秒</h1></td>
+	<td><h1><img src="love.png" alt="love" height="50" width="50"> -1</h1></td>
+	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-40</h1></td>
+	<td><h1><img src="exp.png" alt="exp" height="50" width="50">+60</h1></td>
 	<td><h1>70元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='3';";
@@ -93,10 +86,10 @@ h1 { text-align: center}
 	?>
 <tr/>
 <tr>
-	<td><h1><img src="corn.png" alt="corn" height="80" width="80">60秒</h1></td>
-	<td><h1><img src="love.png" alt="love" height="60" width="60"> -1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="80" width="80">-50</h1></td>
-	<td><h1><img src="exp.png" alt="exp" height="80" width="80">+80</h1></td>
+	<td><h1><img src="corn.png" alt="corn" height="50" width="50">60秒</h1></td>
+	<td><h1><img src="love.png" alt="love" height="50" width="50"> -1</h1></td>
+	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-50</h1></td>
+	<td><h1><img src="exp.png" alt="exp" height="50" width="50">+80</h1></td>
 	<td><h1>90元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='4';";
@@ -107,9 +100,9 @@ h1 { text-align: center}
 	?>
 <tr/>
 <tr>
-	<td><h1><img src="meat.png" alt="meat" height="80" width="80">   </h1></td>
-	<td><h1><img src="love.png" alt="love" height="60" width="60"> +1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="80" width="80">-50</h1></td>
+	<td><h1><img src="meat.png" alt="meat" height="50" width="50">   </h1></td>
+	<td><h1><img src="love.png" alt="love" height="50" width="50"> +1</h1></td>
+	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-50</h1></td>
 	<td>	</td>
 	<td><h1>50元</h1></td>
 	<?php
@@ -122,9 +115,9 @@ h1 { text-align: center}
 	
 <tr/>
 <tr>
-	<td><h1><img src="land.png" alt="land" height="80" width="80">   </h1></td>
+	<td><h1><img src="land.png" alt="land" height="50" width="50">   </h1></td>
 	<td>	</td>
-	<td><h1><img src="coin.png" alt="coin" height="80" width="80">-50</h1></td>
+	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-50</h1></td>
 	<td>	</td>
 	<td>	</td>
 	<?php
