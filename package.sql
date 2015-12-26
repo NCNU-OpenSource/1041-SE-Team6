@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2015 年 12 月 26 日 04:33
+-- 產生時間： 2015-12-26 14:22:03
 -- 伺服器版本: 5.6.26
 -- PHP 版本： 5.6.12
 
@@ -32,20 +32,21 @@ CREATE TABLE IF NOT EXISTS `package` (
   `item_price` int(11) NOT NULL,
   `item_hp` int(11) NOT NULL,
   `item_exp` int(11) NOT NULL,
-  `qty` int(11) NOT NULL DEFAULT '0'
+  `item_outprice` int(11) NOT NULL,
+  `item_time` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- 資料表的匯出資料 `package`
 --
 
-INSERT INTO `package` (`id`, `item_name`, `item_price`, `item_hp`, `item_exp`, `qty`) VALUES
-(1, 'carrot', 20, 1, 30, 0),
-(2, 'mushroom', 40, 1, 50, 0),
-(3, 'eggplant', 40, 1, 60, 0),
-(4, 'corn', 50, 1, 80, 0),
-(5, 'meat', 50, 1, 0, 0),
-(6, 'land', 50, 0, 0, 0);
+INSERT INTO `package` (`id`, `item_name`, `item_price`, `item_hp`, `item_exp`, `item_outprice`, `item_time`) VALUES
+(1, 'carrot', 20, 1, 30, 30, 10),
+(2, 'mushroom', 40, 1, 50, 60, 30),
+(3, 'eggplant', 40, 1, 60, 70, 50),
+(4, 'corn', 50, 1, 80, 90, 60),
+(5, 'meat', 50, 1, 0, 50, 0),
+(6, 'land', 50, 0, 0, 0, 0);
 
 --
 -- 已匯出資料表的索引
