@@ -78,15 +78,16 @@ window.onload=function() {
   $(function() {
     $( "#progressbar" ).progressbar({
 		
-		<?php
-       $sql = "select * from user;";
-       $results=mysqli_query($conn,$sql);
-       if ($rs=mysqli_fetch_array($results)) {
-       ?>
-      value: <?php echo $rs['exp']; ?>
-	  <?php
-	   }
-	    ?>
+	<?php
+	$userid=$_SESSION['uID'];
+    $sql = "select * from user where id='".$userid."';";
+    $results=mysqli_query($conn,$sql);
+    if ($rs=mysqli_fetch_array($results)) {
+    ?>
+    value: <?php echo $rs['exp']; ?>
+	<?php
+	}
+	?>
     });
   });
   
@@ -119,19 +120,6 @@ window.onload=function() {
     echo"</div>";
 ?>
 <?php
-$sqluser = "select * from user ;";
-$rsuser=mysqli_query($conn,$sqluser);
-$rsu=mysqli_fetch_array($rsuser);
-	
-if($rsu['exp']>=100){
-	$sql ="update user set level=level+'1';";
-	mysqli_query($conn,$sql) or die("MySQL query error"); 
-	$sql ="update user set exp=exp-'100';";
-	mysqli_query($conn,$sql) or die("MySQL query error");
-	header("Location: 02.list.php");
-}
-?>
-<?php
 $userid=$_SESSION['uID'];
 $sqlui="select * from user where id='".$userid."';";
 $resultsui=mysqli_query($conn,$sqlui);
@@ -150,6 +138,15 @@ echo $rsui['lovecount'];
 <div id="level">
 <?php
 echo $rsui['level'];
+?>
+<?php
+if($rsui['exp']>=100){
+	$sql ="update user set level=level+'1' where id='".$userid."';";
+	mysqli_query($conn,$sql) or die("MySQL query error"); 
+	$sql ="update user set exp=exp-'100' where id='".$userid."';";
+	mysqli_query($conn,$sql) or die("MySQL query error");
+	header("Location: 02.list.php");
+}
 ?>
 </div>
 <a href="shop.php"><img id="shop" src="shop.png" alt="shop" class="shop" height="100" width="100"></a>
