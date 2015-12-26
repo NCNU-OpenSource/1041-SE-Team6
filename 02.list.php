@@ -1,7 +1,6 @@
 <?php 
 require("config.php");
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -25,7 +24,13 @@ h1 {padding:5px;  text-align: center}
   width: 380px ;
  margin:175px auto; 
  }
-  
+#top{
+    position:absolute;
+    top: 45px;
+    left:720px;
+    font-size: 20pt
+    text-align:right;
+}  
  .shop{
 position:absolute;
 }
@@ -107,6 +112,12 @@ window.onload=function() {
 
 
 <body  style="background-color:#63FF63" >
+<?php
+    $id=$_SESSION['uID'];
+    echo"<div id=\"top\">";
+    echo"親愛的".$id."，你好！ ";
+    echo"</div>";
+?>
 <?php
 $sqluser = "select * from user ;";
 $rsuser=mysqli_query($conn,$sqluser);
