@@ -252,31 +252,29 @@ if($rsu['exp']>=100){
 	</td>
 </tr>
 </table>  
-  
 </div>
- 
-
-
-
 
 <?php
-$sql = "select * from user;";
-$results=mysqli_query($conn,$sql);
-if ($rs=mysqli_fetch_array($results)) {
+$uerid=$_SESSION['uID'];
+$sql2="select * from user where id='".$uerid."';";
+$results2=mysqli_query($conn,$sql2);//跟sql2指令連結
+$rs2=mysqli_fetch_array($results2);
 ?>
 <div id="coincount">
-<?php echo $rs['cashinhand']; ?>
+<?php 
+echo $rs2['cashinhand'];
+?>
 </div>
 <div id="lovecount">
-<?php echo $rs['lovecount']; ?>
+<?php
+echo $rs2['lovecount'];
+?>
 </div>
 <div id="level">
-<?php echo $rs['level']; ?>
-</div>
-
 <?php
-}
+echo $rs2['level'];
 ?>
+</div>
 
 
 <div id="lv">LV.</div>
@@ -303,11 +301,6 @@ if ($rs=mysqli_fetch_array($results)) {
     <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
    </tr>
 </div>   
-<?php
-$uerid=$_SESSION['uID'];
-$sql2="select  * from user where id =$uerid;";
-$results2=mysqli_query($conn,$sql2);//跟sql2指令連結
-?>
 </body>
 </table>
 

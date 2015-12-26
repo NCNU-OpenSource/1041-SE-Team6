@@ -15,30 +15,29 @@ $db = 'mydb';
 $conn = mysqli_connect($host, $user, $pass,$db) or die('Error with MySQL connection'); //跟MyMSQL連線並登入
 mysqli_query($conn,"SET NAMES utf8"); //選擇編碼
 //mysql_select_db($db, $conn); //選擇資料庫
-$_SESSION['uID'] = "";
-$_SESSION['nName']= "";
-if(isset($_POST['id']))
-	$userName = $_POST['id'];
-else
-	$userName ="";
-if(isset($_POST['pwd']))
-	$passWord = $_POST['pwd'];
-else
-	$passWord ="";
-		$sql = "SELECT * FROM user WHERE id='" . $userName . "' AND password= '" . $passWord . "'   ";
-		
-		if ($result = mysqli_query($conn,$sql)) {
-			if ($row=mysqli_fetch_array($result)) {
-				$_SESSION['uID'] = $row['id'];
-				
-				header("Location:02.list.php");
-				
-				exit(0);
-			} 
-			
 
-			
-		}
+$_SESSION['uID'] = "";
+if(isset($_POST['id'])){
+	$userName = $_POST['id'];
+}else{
+	$userName ="";
+}
+if(isset($_POST['pwd'])){
+	$passWord = $_POST['pwd'];
+}else{
+	$passWord ="";
+}
+
+$sql = "SELECT * FROM user WHERE id='" . $userName . "' AND password= '" . $passWord . "'";	
+if ($result = mysqli_query($conn,$sql)) {
+	if ($row=mysqli_fetch_array($result)) {
+		$_SESSION['uID'] = $row['id'];	
+		header("Location:02.list.php");	
+		exit(0);
+	}else{
+		echo "Invalid Username or Password - Please try again <br />";				
+	}
+}
 		
 		
 ?>
