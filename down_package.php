@@ -71,6 +71,7 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		header("Location: 02.list.php");
 	}
+	header("Location: 02.list.php");
 }
 else{
 	header("Location: 02.list.php");
