@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2015 年 12 月 26 日 04:33
--- 伺服器版本: 5.6.26
--- PHP 版本： 5.6.12
+-- 產生時間： 2015-12-26: 12:42:54
+-- 伺服器版本: 5.6.24
+-- PHP 版本： 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- 資料庫： `mydb`
@@ -40,7 +40,10 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `password`, `cashinhand`, `lovecount`, `level`, `exp`) VALUES
-('111', '111', 100, 5, 1, 0);
+('111', '111', 100, 5, 1, 0),
+('test', 'test', 100, 5, 1, 0),
+('userT', '9999', 100, 5, 1, 0),
+('william', 'william', 100, 5, 1, 0);
 
 --
 -- 已匯出資料表的索引
