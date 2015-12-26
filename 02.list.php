@@ -26,8 +26,8 @@ h1 {padding:5px;  text-align: center}
  }
 #top{
     position:absolute;
-    top: 45px;
-    left:720px;
+    top: 110px;
+    left:60px;
     font-size: 20pt
     text-align:right;
 }  
@@ -115,7 +115,7 @@ window.onload=function() {
 <?php
     $id=$_SESSION['uID'];
     echo"<div id=\"top\">";
-    echo"親愛的".$id."，你好！ ";
+    echo"$id";
     echo"</div>";
 ?>
 <?php
@@ -143,7 +143,7 @@ if($rsu['exp']>=100){
 
 <div id="progressbar" style="width:180px" ></div>
 
-<div id="dialog" title="背包">
+<div id="dialog" title="背包" >
 <table>
 <tr>
 	<td><img src="carrot.png" alt="carrot" height="100" width="100"></br>
