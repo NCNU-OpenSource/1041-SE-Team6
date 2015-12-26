@@ -22,29 +22,55 @@ $sqlpack = "select * from package where id=$id;";
 $rspack=mysqli_query($conn,$sqlpack);
 $rsp=mysqli_fetch_array($rspack);
 
-if($rsp['id']<='4'&&($rsp['qty']>=1)){
-	
-	if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
+if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
+	if($id=='1' && $rsu['carrot_qty']>='1'){
 		$sql ="update user set lovecount=lovecount-".$rsp['item_hp']." where id='".$userid."';"; //user的心減少
-		mysqli_query($conn,$sql) or die("MySQL query error");
-		$sql = "update package set qty=qty-1 where id=$id;";//數量減少
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql ="update user set exp=exp+".$rsp['item_exp']." where id='".$userid."';"; //經驗增加
 		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sql= "update user set carrot_qty=carrot_qty-1 where id='".$userid."';";//carrot數量減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
 		header("Location: 02.list.php");
 	}
-}	
-else if($rsp['id']=='5'&&($rsp['qty']>=1)){ //雞腿
-	$sqlm ="update user set lovecount=lovecount+'1' where id='".$userid."';"; //user的心+1
-	mysqli_query($conn,$sqlm) or die("MySQL query error");
-	$sqlm = "update package set qty=qty-'1' where id=$id;";//數量減少
-	mysqli_query($conn,$sqlm) or die("MySQL query error");
-	header("Location: 02.list.php");
-}
-else if($rsp['id']=='6'&&($rsp['qty']>=1)){ //土地
-	$sqll = "update package set qty=qty-'1' where id=$id;";//數量減少
-	mysqli_query($conn,$sqll) or die("MySQL query error");
-	header("Location: 02.list.php");
+	else if($id=='2' && $rsu['mushroom_qty']>='1'){
+		$sql ="update user set lovecount=lovecount-".$rsp['item_hp']." where id='".$userid."';"; //user的心減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sql ="update user set exp=exp+".$rsp['item_exp']." where id='".$userid."';"; //經驗增加
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sql= "update user set mushroom_qty=mushroom_qty-1 where id='".$userid."';";//mushroom數量減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		header("Location: 02.list.php");
+	}
+	else if($id=='3' && $rsu['eggplant_qty']>='1'){
+		$sql ="update user set lovecount=lovecount-".$rsp['item_hp']." where id='".$userid."';"; //user的心減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sql ="update user set exp=exp+".$rsp['item_exp']." where id='".$userid."';"; //經驗增加
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sql= "update user set eggplant_qty=eggplant_qty-1 where id='".$userid."';";//eggplant數量減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		header("Location: 02.list.php");
+	}
+	else if($id=='4' && $rsu['corn_qty']>='1'){
+		$sql ="update user set lovecount=lovecount-".$rsp['item_hp']." where id='".$userid."';"; //user的心減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sql ="update user set exp=exp+".$rsp['item_exp']." where id='".$userid."';"; //經驗增加
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sql= "update user set corn_qty=corn_qty-1 where id='".$userid."';";//corn數量減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		header("Location: 02.list.php");
+	}
+	else if($id=='5' && $rsu['meat_qty']>='1'){
+		$sql ="update user set lovecount=lovecount+'1' where id='".$userid."';"; //user的心增加
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sql= "update user set meat_qty=meat_qty-1 where id='".$userid."';";//meat數量減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		header("Location: 02.list.php");
+	}
+	else if($id=='6' && $rsu['land_qty']>='1'){
+		$sql= "update user set land_qty=land_qty-1 where id='".$userid."';";//land數量減少
+		mysqli_query($conn,$sql) or die("MySQL query error");
+		header("Location: 02.list.php");
+	}
 }
 else{
 	header("Location: 02.list.php");
