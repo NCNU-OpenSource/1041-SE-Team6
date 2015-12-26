@@ -131,6 +131,27 @@ if($rsu['exp']>=100){
 	header("Location: 02.list.php");
 }
 ?>
+<?php
+$userid=$_SESSION['uID'];
+$sqlui="select * from user where id='".$userid."';";
+$resultsui=mysqli_query($conn,$sqlui);
+$rsui=mysqli_fetch_array($resultsui);
+?>
+<div id="coincount">
+<?php 
+echo $rsui['cashinhand'];
+?>
+</div>
+<div id="lovecount">
+<?php
+echo $rsui['lovecount'];
+?>
+</div>
+<div id="level">
+<?php
+echo $rsui['level'];
+?>
+</div>
 <a href="shop.php"><img id="shop" src="shop.png" alt="shop" class="shop" height="100" width="100"></a>
 <a href="login.php"><img id="ctrl" src="ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
 <img id="people" src="people.png" alt="people" class="people" height="100" width="100">
@@ -253,29 +274,6 @@ if($rsu['exp']>=100){
 </tr>
 </table>  
 </div>
-
-<?php
-$uerid=$_SESSION['uID'];
-$sql2="select * from user where id='".$uerid."';";
-$results2=mysqli_query($conn,$sql2);//跟sql2指令連結
-$rs2=mysqli_fetch_array($results2);
-?>
-<div id="coincount">
-<?php 
-echo $rs2['cashinhand'];
-?>
-</div>
-<div id="lovecount">
-<?php
-echo $rs2['lovecount'];
-?>
-</div>
-<div id="level">
-<?php
-echo $rs2['level'];
-?>
-</div>
-
 
 <div id="lv">LV.</div>
 <div id="content">

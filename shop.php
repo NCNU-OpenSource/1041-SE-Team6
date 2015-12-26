@@ -137,7 +137,8 @@ h1 { text-align: center}
 	
 <tr/>
 <?php
-$sql = "select * from user;";
+$userid=$_SESSION['uID'];
+$sql = "select * from user where id='".$userid."';";
 $results=mysqli_query($conn,$sql);
 if ($rs=mysqli_fetch_array($results)) {
 ?>
