@@ -29,7 +29,7 @@ h1 {padding:5px;  text-align: center}
     top: 110px;
     left:60px;
     font-size: 20pt
-    text-align:right;
+    text-align:center;
 }  
  .shop{
 position:absolute;
@@ -113,12 +113,12 @@ window.onload=function() {
 
 
 <body  style="background-color:#63FF63" >
-<?php
+<h1><?php
     $id=$_SESSION['uID'];
     echo"<div id=\"top\">";
     echo"$id";
     echo"</div>";
-?>
+?></h1>
 <?php
 $userid=$_SESSION['uID'];
 $sqlui="select * from user where id='".$userid."';";
