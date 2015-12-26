@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2015-12-25 06:20:31
+-- 產生時間： 2015 年 12 月 26 日 04:33
 -- 伺服器版本: 5.6.26
 -- PHP 版本： 5.6.12
 
@@ -40,8 +40,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `password`, `cashinhand`, `lovecount`, `level`, `exp`) VALUES
-('111', '111', 0, 5, 1, 0),
-('userT', '9999', 0, 5, 1, 0);
+('111', '111', 100, 5, 1, 0);
 
 --
 -- 已匯出資料表的索引
