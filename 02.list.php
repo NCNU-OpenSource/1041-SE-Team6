@@ -21,7 +21,7 @@ h1 {padding:5px;  text-align: center}
 #package{position:fixed;top:300px;left:200px; }
 
  body {
-  width: 380px ;
+  width: 480px ;
  margin:175px auto; 
  }
 #top{
@@ -106,13 +106,194 @@ window.onload=function() {
       $( "#dialog" ).dialog( "open" );
     });
   });
-  
+
+$(function() {
+    $( "#grow" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu" ).click(function() {
+      $( "#grow" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow2" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu2" ).click(function() {
+      $( "#grow" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow3" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu3" ).click(function() {
+      $( "#grow3" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow4" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu4" ).click(function() {
+      $( "#grow" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow5" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu5" ).click(function() {
+      $( "#grow5" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow6" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu6" ).click(function() {
+      $( "#grow" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow7" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu7" ).click(function() {
+      $( "#grow7" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow8" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu8" ).click(function() {
+      $( "#grow8" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow9" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu9" ).click(function() {
+      $( "#grow9" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow10" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu10" ).click(function() {
+      $( "#grow10" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow11" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu11" ).click(function() {
+      $( "#grow11" ).dialog( "open" );
+    });
+  });  
+$(function() {
+    $( "#grow12" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind", 
+		
+      },
+      hide: {
+        effect: "blind",       
+      }
+    }); 
+    $( "#open_menu12" ).click(function() {
+      $( "#grow12" ).dialog( "open" );
+    });
+  });  
 </script>
 
 
 
 
 <body  style="background-color:#63FF63" >
+<div id="lv">LV.</div>
 <h1><?php
     $id=$_SESSION['uID'];
     echo"<div id=\"top\">";
@@ -155,7 +336,7 @@ if($rsui['exp']>=100){
 <img id="coin" src="coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="love.png" alt="love" class="love" height="50" width="50">
 
-<div id="package"  >
+<div id="package">
 <img id="opener" src="package.png" alt="package" class="package" height="150" width="150">
 </div>
 
@@ -359,31 +540,1027 @@ if($rsui['exp']>=100){
 </table>  
 </div>
 
-<div id="lv">LV.</div>
-<div id="content">
+<div id="content"> <!--土地的顯示-->
 <table>
-  <tr>
-    <td><img  src="p2.png" alt="田"  height="100" width="100"/>  </td> 	
-    <td><img src="p2.png" alt="田" height="100" width="100"/>
-	
-	</td>
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td> 	 
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
-   </tr>
-   <tr>
-    <td><img src="p2.png" alt="田" height="100" width="100"/>  </td> 	
-    <td><img src="p2.png" alt="田" height="100" width="100"/>  </td>
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td> 	 
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
-   </tr>
-	<tr>
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td> 	
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td> 	 
-    <td><img src="p3.png" alt="草" height="100" width="100"/>  </td>
-   </tr>
-</div>   
-</body>
-</table>
+<tr>
+	<!-- 0=未開耕，1=可種植， 2=種植中-->
+	<td><?php
+		$sql ="select * from land where id='1';"; //land 1
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu" src="p2.png" height="100" width="100">
+		
+			<div id="grow" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
 
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+		
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+	?></td>
+	<td><?php
+		$sql ="select * from land where id='2';"; //land 2
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu2" src="p2.png" height="100" width="100">
+		
+			<div id="grow2" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+	?></td>
+	<td><?php
+		$sql ="select * from land where id='3';"; //land 3
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu3" src="p2.png" height="100" width="100">
+		
+			<div id="grow3" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+	?></td>
+	<td><?php
+		$sql ="select * from land where id='4';"; //land 4
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			</br><img id="open_menu4" src="p2.png" height="100" width="100">
+		
+			<div id="grow4" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+	?></td>
+</tr>
+<tr>
+	<td><?php
+		$sql ="select * from land where id='5';"; //land 5
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu5" src="p2.png" height="100" width="100">
+		
+			<div id="grow5" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+	?></td>
+	<td><?php
+		$sql ="select * from land where id='6';"; //land 6
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu6" src="p2.png" height="100" width="100">
+		
+			<div id="grow6" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+	?></td>
+	<td><?php
+		$sql ="select * from land where id='7';"; //land 7
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu7" src="p2.png" height="100" width="100">
+		
+			<div id="grow7" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+	?></td>
+	<td><?php
+		$sql ="select * from land where id='8';"; //land 8
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';"; 
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu8" src="p2.png" height="100" width="100">
+		
+			<div id="grow8" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+	?></td>
+</tr>
+<tr>
+	<td><?php
+		$sql ="select * from land where id='9';"; //land 9
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu9" src="p2.png" height="100" width="100">
+		
+			<div id="grow9" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+		?></td>
+	<td><?php
+		$sql ="select * from land where id='10';"; //land 10
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu10" src="p2.png" height="100" width="100">
+		
+			<div id="grow10" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+		?></td>
+	<td><?php
+		$sql ="select * from land where id='11';"; //land 11
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu11" src="p2.png" height="100" width="100">
+		
+			<div id="grow11" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+		?></td>
+	<td><?php
+		$sql ="select * from land where id='12';"; //land 12
+		$results=mysqli_query($conn,$sql);
+		$rs=mysqli_fetch_array($results);
+		if($rs['status']=='0'){ //未開耕
+			$sqlc= "select * from package where id='6';";
+			$results=mysqli_query($conn,$sqlc);
+			$rsc=mysqli_fetch_array($results);
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+		}
+		else if($rs['status']=='1'){ //可種植
+		?>
+			<img id="open_menu12" src="p2.png" height="100" width="100">
+		
+			<div id="grow12" title="可種植" > <!--可種植的內容-->
+			<table width="300">
+			<tr>
+				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				</br>
+				<?php
+				$sqlc = "select * from package where id='1';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='2';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+				
+				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='3';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+
+				<td><img src="corn.png" alt="corn" height="100" width="100">
+				</br>
+				<?php
+				$sqlc = "select * from package where id='4';";
+				$results=mysqli_query($conn,$sqlc);
+				if ($rsc=mysqli_fetch_array($results)) {
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				}
+				?>	
+				</td>
+			</tr>
+			</table>  
+			</div>
+			
+		<?php
+		}
+		else if($rs['status']=='2'){ //種植中
+			if($rs['item_onland']=='1'){
+				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='2'){
+				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='3'){
+				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else if($rs['item_onland']=='4'){
+				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+			}
+			else{
+				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+			}
+		}
+		?></td>
+</tr>
+
+</table>
+</div>
+
+</body>
 </html>
