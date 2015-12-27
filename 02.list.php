@@ -322,12 +322,20 @@ echo $rsui['lovecount'];
 <?php
 echo $rsui['level'];
 ?>
+
 </div>
-<a href="shop.php"><img id="shop" src="shop.jpg" alt="shop" class="shop" height="100" width="100"></a>
-<a href="login.php"><img id="ctrl" src="ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
-<img id="people" src="people.png" alt="people" class="people" height="100" width="100">
+<?php
+if($rsui['sex']=='m'){
+	echo "<img id=\"people\" src=\"boy.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
+}else{
+	echo "<img id=\"people\" src=\"girl.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
+}
+?>
+
 <img id="coin" src="coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="love.png" alt="love" class="love" height="50" width="50">
+<a href="shop.php"><img id="shop" src="shop.png" alt="shop" class="shop" height="100" width="100"></a>
+<a href="login.php"><img id="ctrl" src="ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
 
 <div id="package">
 <img id="opener" src="package.png" alt="package" class="package" height="150" width="150">
@@ -488,11 +496,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu" src="p2.png" height="100" width="100">
+			<img id="open_menu" src="grass.png" height="100" width="100">
 		
 			<div id="grow" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -595,7 +603,7 @@ echo $rsui['level'];
 			}
 		
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -607,11 +615,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu2" src="p2.png" height="100" width="100">
+			<img id="open_menu2" src="grass.png" height="100" width="100">
 		
 			<div id="grow2" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -712,7 +720,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -724,11 +732,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu3" src="p2.png" height="100" width="100">
+			<img id="open_menu3" src="grass.png" height="100" width="100">
 		
 			<div id="grow3" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -830,7 +838,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -842,11 +850,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu4" src="p2.png" height="100" width="100">
+			<img id="open_menu4" src="grass.png" height="100" width="100">
 		
 			<div id="grow4" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -947,7 +955,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -961,11 +969,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu5" src="p2.png" height="100" width="100">
+			<img id="open_menu5" src="grass.png" height="100" width="100">
 		
 			<div id="grow5" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1065,7 +1073,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -1077,11 +1085,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu6" src="p2.png" height="100" width="100">
+			<img id="open_menu6" src="grass.png" height="100" width="100">
 		
 			<div id="grow6" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1181,7 +1189,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -1193,11 +1201,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu7" src="p2.png" height="100" width="100">
+			<img id="open_menu7" src="grass.png" height="100" width="100">
 		
 			<div id="grow7" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1297,7 +1305,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -1309,11 +1317,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';"; 
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu8" src="p2.png" height="100" width="100">
+			<img id="open_menu8" src="grass.png" height="100" width="100">
 		
 			<div id="grow8" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1413,7 +1421,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -1427,11 +1435,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu9" src="p2.png" height="100" width="100">
+			<img id="open_menu9" src="grass.png" height="100" width="100">
 		
 			<div id="grow9" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1531,7 +1539,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 		?></td>
@@ -1543,11 +1551,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu10" src="p2.png" height="100" width="100">
+			<img id="open_menu10" src="grass.png" height="100" width="100">
 		
 			<div id="grow10" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1647,7 +1655,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 		?></td>
@@ -1659,11 +1667,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu11" src="p2.png" height="100" width="100">
+			<img id="open_menu11" src="grass.png" height="100" width="100">
 		
 			<div id="grow11" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1763,7 +1771,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 		?></td>
@@ -1775,11 +1783,11 @@ echo $rsui['level'];
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"p3.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu12" src="p2.png" height="100" width="100">
+			<img id="open_menu12" src="grass.png" height="100" width="100">
 		
 			<div id="grow12" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1879,7 +1887,7 @@ echo $rsui['level'];
 				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"p2.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 		?></td>
