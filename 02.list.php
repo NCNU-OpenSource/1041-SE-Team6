@@ -317,12 +317,13 @@ echo $rsui['level'];
 ?>
 </div>
 <?php
-if($rsui=='m'){
+if($rsui['sex']=='m'){
 	echo "<img id=\"people\" src=\"img\boy.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
 }else{
 	echo "<img id=\"people\" src=\"img\girl.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
 }
 ?>
+
 <img id="coin" src="img\coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="img\love.png" alt="love" class="love" height="50" width="50">
 <a href="shop.php"><img id="shop" src="img\shop.png" alt="shop" class="shop" height="100" width="100"></a>
