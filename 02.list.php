@@ -323,7 +323,7 @@ echo $rsui['lovecount'];
 echo $rsui['level'];
 ?>
 </div>
-<a href="shop.php"><img id="shop" src="shop.png" alt="shop" class="shop" height="100" width="100"></a>
+<a href="shop.php"><img id="shop" src="shop.jpg" alt="shop" class="shop" height="100" width="100"></a>
 <a href="login.php"><img id="ctrl" src="ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
 <img id="people" src="people.png" alt="people" class="people" height="100" width="100">
 <img id="coin" src="coin.png" alt="coin" class="coin" height="50" width="50">
@@ -347,18 +347,12 @@ echo $rsui['level'];
 	$rs=mysqli_fetch_array($results);
 	echo $rs['meat_qty'];
 	?></br>
-	出售價：
-	<?php
-	$sql ="select item_outprice from package where id='5';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_outprice'];
-	?></br>
+
 	<?php
 	$sqlc = "select * from package where id='5';";
 	$results=mysqli_query($conn,$sqlc);
 	if ($rs=mysqli_fetch_array($results)) {
-	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
+	echo"<a href='down_package.php?id=",$rs['id'],"'><button>使用</button></a>";
 	}
 	?>	
 	</td>
@@ -376,19 +370,20 @@ echo $rsui['level'];
 	
 	<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='1';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
 	數量：
 	<?php
 	$sql = "select carrot_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['carrot_qty'];
+	?>
+	</br>
+	種植時間：
+	<?php
+	$sql ="select item_time from package where id='1';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_time'];
 	?></br>
 	出售價：
 	<?php
@@ -401,19 +396,20 @@ echo $rsui['level'];
 	
 	<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='2';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
 	數量：
 	<?php
 	$sql = "select mushroom_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['mushroom_qty'];
+	?>
+	</br>
+	種植時間：
+	<?php
+	$sql ="select item_time from package where id='2';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_time'];
 	?></br>
 	出售價：
 	<?php
@@ -426,19 +422,20 @@ echo $rsui['level'];
 	
 	<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='3';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
 	數量：
 	<?php
 	$sql = "select eggplant_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['eggplant_qty'];
+	?>
+	</br>
+	種植時間：
+	<?php
+	$sql ="select item_time from package where id='3';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_time'];
 	?></br>
 	出售價：
 	<?php
@@ -451,19 +448,20 @@ echo $rsui['level'];
 
 	<td><img src="corn.png" alt="corn" height="100" width="100">
 	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='4';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
 	數量：
 	<?php
 	$sql = "select corn_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['corn_qty'];
+	?>
+	</br>
+	種植時間：
+	<?php
+	$sql ="select item_time from package where id='4';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_time'];
 	?></br>
 	出售價：
 	<?php
@@ -500,45 +498,79 @@ echo $rsui['level'];
 			<table width="300">
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				
+				</br>				
+	            數量：
+				<?php
+				$sql = "select carrot_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['carrot_qty'];
+				?>
 				</br>
+				
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -586,44 +618,77 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
-				<?php
+				 
+	數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>			
+	<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -670,44 +735,78 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
-				<?php
+				
+	數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
+	<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -754,44 +853,77 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				
+	數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -840,44 +972,76 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -924,44 +1088,76 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -1008,44 +1204,76 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -1092,44 +1320,76 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -1178,44 +1438,76 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -1262,44 +1554,76 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -1346,44 +1670,76 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
@@ -1430,44 +1786,76 @@ echo $rsui['level'];
 			<tr>
 				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
+				數量：
+	<?php
+	$sql = "select meat_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['meat_qty'];
+	?>
+	</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select mushroom_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['mushroom_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='2';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 				
 				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select eggplant_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['eggplant_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='3';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
 
 				<td><img src="corn.png" alt="corn" height="100" width="100">
 				</br>
+				數量：
+				<?php
+				$sql = "select corn_qty from user where id='".$userid."';";
+				$results=mysqli_query($conn,$sql);
+				$rs=mysqli_fetch_array($results);
+				echo $rs['corn_qty'];
+				?>
+				</br>
 				<?php
 				$sqlc = "select * from package where id='4';";
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
-				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><button>使用</button></a>";
 				}
 				?>	
 				</td>
