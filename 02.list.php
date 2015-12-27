@@ -326,19 +326,19 @@ echo $rsui['level'];
 </div>
 <?php
 if($rsui['sex']=='m'){
-	echo "<img id=\"people\" src=\"boy.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
+	echo "<img id=\"people\" src=\"img\boy.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
 }else{
-	echo "<img id=\"people\" src=\"girl.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
+	echo "<img id=\"people\" src=\"img\girl.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
 }
 ?>
 
-<img id="coin" src="coin.png" alt="coin" class="coin" height="50" width="50">
-<img id="love" src="love.png" alt="love" class="love" height="50" width="50">
-<a href="shop.php"><img id="shop" src="shop.png" alt="shop" class="shop" height="100" width="100"></a>
-<a href="login.php"><img id="ctrl" src="ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
+<img id="coin" src="img\coin.png" alt="coin" class="coin" height="50" width="50">
+<img id="love" src="img\love.png" alt="love" class="love" height="50" width="50">
+<a href="shop.php"><img id="shop" src="img\shop.png" alt="shop" class="shop" height="100" width="100"></a>
+<a href="login.php"><img id="ctrl" src="img\ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
 
 <div id="package">
-<img id="opener" src="package.png" alt="package" class="package" height="150" width="150">
+<img id="opener" src="img\package.png" alt="package" class="package" height="150" width="150">
 </div>
 
 <div id="progressbar" style="width:180px" ></div>
@@ -346,7 +346,7 @@ if($rsui['sex']=='m'){
 <div id="dialog" title="背包" > <!--背包的內容-->
 <table width="800">
 <tr>
-	<td><img src="meat.png" alt="meat" height="100" width="100">
+	<td><img src="img\meat.png" alt="meat" height="100" width="100">
 	</br>
 	數量：
 	<?php
@@ -365,7 +365,7 @@ if($rsui['sex']=='m'){
 	?>	
 	</td>
 	
-	<td><img src="land.png" alt="land" height="100" width="100">
+	<td><img src="img\land.png" alt="land" height="100" width="100">
 	</br>
 	數量：
 	<?php
@@ -376,7 +376,7 @@ if($rsui['sex']=='m'){
 	?>	
 	</td>
 	
-	<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+	<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 	</br>
 	數量：
 	<?php
@@ -402,7 +402,7 @@ if($rsui['sex']=='m'){
 	?>
 	</td>
 	
-	<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+	<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 	</br>
 	數量：
 	<?php
@@ -428,7 +428,7 @@ if($rsui['sex']=='m'){
 	?>
 	</td>
 	
-	<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+	<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 	</br>
 	數量：
 	<?php
@@ -454,7 +454,7 @@ if($rsui['sex']=='m'){
 	?>
 	</td>
 
-	<td><img src="corn.png" alt="corn" height="100" width="100">
+	<td><img src="img\corn.png" alt="corn" height="100" width="100">
 	</br>
 	數量：
 	<?php
@@ -496,16 +496,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu" src="grass.png" height="100" width="100">
+			<img id="open_menu" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				
 				</br>				
 	            數量：
@@ -526,7 +526,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -545,7 +545,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -564,7 +564,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -590,20 +590,20 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 		
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -615,16 +615,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu2" src="grass.png" height="100" width="100">
+			<img id="open_menu2" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow2" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				 
 	數量：
@@ -644,7 +644,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -663,7 +663,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -682,7 +682,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -708,19 +708,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -732,16 +732,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu3" src="grass.png" height="100" width="100">
+			<img id="open_menu3" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow3" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				
 	數量：
@@ -761,7 +761,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				
 				數量：
@@ -781,7 +781,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -800,7 +800,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -826,19 +826,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -850,16 +850,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu4" src="grass.png" height="100" width="100">
+			<img id="open_menu4" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow4" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				
 	數量：
@@ -879,7 +879,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -898,7 +898,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -917,7 +917,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -943,19 +943,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -969,16 +969,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu5" src="grass.png" height="100" width="100">
+			<img id="open_menu5" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow5" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				數量：
 	<?php
@@ -997,7 +997,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1016,7 +1016,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1035,7 +1035,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1061,19 +1061,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -1085,16 +1085,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu6" src="grass.png" height="100" width="100">
+			<img id="open_menu6" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow6" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				數量：
 	<?php
@@ -1113,7 +1113,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1132,7 +1132,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1151,7 +1151,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1177,19 +1177,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -1201,16 +1201,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu7" src="grass.png" height="100" width="100">
+			<img id="open_menu7" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow7" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				數量：
 	<?php
@@ -1229,7 +1229,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1248,7 +1248,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1267,7 +1267,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1293,19 +1293,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -1317,16 +1317,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';"; 
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu8" src="grass.png" height="100" width="100">
+			<img id="open_menu8" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow8" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				數量：
 	<?php
@@ -1345,7 +1345,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1364,7 +1364,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1383,7 +1383,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1409,19 +1409,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 	?></td>
@@ -1435,16 +1435,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu9" src="grass.png" height="100" width="100">
+			<img id="open_menu9" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow9" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				數量：
 	<?php
@@ -1463,7 +1463,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1482,7 +1482,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1501,7 +1501,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1527,19 +1527,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 		?></td>
@@ -1551,16 +1551,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu10" src="grass.png" height="100" width="100">
+			<img id="open_menu10" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow10" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				數量：
 	<?php
@@ -1579,7 +1579,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1598,7 +1598,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1617,7 +1617,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1643,19 +1643,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 		?></td>
@@ -1667,16 +1667,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu11" src="grass.png" height="100" width="100">
+			<img id="open_menu11" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow11" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				數量：
 	<?php
@@ -1695,7 +1695,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1714,7 +1714,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1733,7 +1733,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1759,19 +1759,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 		?></td>
@@ -1783,16 +1783,16 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\farm.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu12" src="grass.png" height="100" width="100">
+			<img id="open_menu12" src="img\grass.png" height="100" width="100">
 		
 			<div id="grow12" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
-				<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 				</br>
 				數量：
 	<?php
@@ -1811,7 +1811,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+				<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1830,7 +1830,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 				
-				<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+				<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1849,7 +1849,7 @@ if($rsui['sex']=='m'){
 				?>	
 				</td>
 
-				<td><img src="corn.png" alt="corn" height="100" width="100">
+				<td><img src="img\corn.png" alt="corn" height="100" width="100">
 				</br>
 				數量：
 				<?php
@@ -1875,19 +1875,19 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\carrot_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='2'){
-				echo "<img src=\"mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='3'){
-				echo "<img src=\"eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\eggplant_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\corn_grow.png\" height=\"100\" width=\"100\">";
 			}
 			else{
-				echo "<img src=\"grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
 		?></td>

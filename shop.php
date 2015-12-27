@@ -44,10 +44,10 @@ h1 { text-align: center}
 <table  width="950" height="100">
 
 <tr>
-	<td><h1><img src="carrot.png" alt="carrot" height="50" width="50">10秒</h1></td>
-	<td><h1><img src="love.png" alt="love" height="50" width="50"> -1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-20</h1></td>
-	<td><h1><img src="exp.png" alt="exp" height="50" width="50">+30</h1></td>
+	<td><h1><img src="img\carrot.png" alt="carrot" height="50" width="50">10秒</h1></td>
+	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> -1</h1></td>
+	<td><h1><img src="img\coin.png" alt="coin" height="50" width="50">-20</h1></td>
+	<td><h1><img src="img\exp.png" alt="exp" height="50" width="50">+30</h1></td>
 	<td><h1>30元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='1';";
@@ -58,10 +58,10 @@ h1 { text-align: center}
 	?>	
 <tr/>
 <tr>
-	<td><h1><img src="mushroom.png" alt="mushroom" height="50" width="50">30秒</h1></td>
-	<td><h1><img src="love.png" alt="love" height="50" width="50"> -1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-40</h1></td>
-	<td><h1><img src="exp.png" alt="exp" height="50" width="50">+50</h1></td>
+	<td><h1><img src="img\mushroom.png" alt="mushroom" height="50" width="50">30秒</h1></td>
+	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> -1</h1></td>
+	<td><h1><img src="img\coin.png" alt="coin" height="50" width="50">-40</h1></td>
+	<td><h1><img src="img\exp.png" alt="exp" height="50" width="50">+50</h1></td>
 	<td><h1>60元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='2';";
@@ -72,10 +72,10 @@ h1 { text-align: center}
 	?>
 <tr/>
 <tr>
-	<td><h1><img src="eggplant.png" alt="eggplant" height="50" width="50">50秒</h1></td>
-	<td><h1><img src="love.png" alt="love" height="50" width="50"> -1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-40</h1></td>
-	<td><h1><img src="exp.png" alt="exp" height="50" width="50">+60</h1></td>
+	<td><h1><img src="img\eggplant.png" alt="eggplant" height="50" width="50">50秒</h1></td>
+	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> -1</h1></td>
+	<td><h1><img src="img\coin.png" alt="coin" height="50" width="50">-40</h1></td>
+	<td><h1><img src="img\exp.png" alt="exp" height="50" width="50">+60</h1></td>
 	<td><h1>70元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='3';";
@@ -86,10 +86,10 @@ h1 { text-align: center}
 	?>
 <tr/>
 <tr>
-	<td><h1><img src="corn.png" alt="corn" height="50" width="50">60秒</h1></td>
-	<td><h1><img src="love.png" alt="love" height="50" width="50"> -1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-50</h1></td>
-	<td><h1><img src="exp.png" alt="exp" height="50" width="50">+80</h1></td>
+	<td><h1><img src="img\corn.png" alt="corn" height="50" width="50">60秒</h1></td>
+	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> -1</h1></td>
+	<td><h1><img src="img\coin.png" alt="coin" height="50" width="50">-50</h1></td>
+	<td><h1><img src="img\exp.png" alt="exp" height="50" width="50">+80</h1></td>
 	<td><h1>90元</h1></td>
 	<?php
 	$sqlc = "select * from package where id='4';";
@@ -100,9 +100,9 @@ h1 { text-align: center}
 	?>
 <tr/>
 <tr>
-	<td><h1><img src="meat.png" alt="meat" height="50" width="50">   </h1></td>
-	<td><h1><img src="love.png" alt="love" height="50" width="50"> +1</h1></td>
-	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-50</h1></td>
+	<td><h1><img src="img\meat.png" alt="meat" height="50" width="50">   </h1></td>
+	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> +1</h1></td>
+	<td><h1><img src="img\coin.png" alt="coin" height="50" width="50">-50</h1></td>
 	<td>	</td>
 	<td><h1>50元</h1></td>
 	<?php
@@ -115,9 +115,9 @@ h1 { text-align: center}
 	
 <tr/>
 <tr>
-	<td><h1><img src="land.png" alt="land" height="50" width="50">   </h1></td>
+	<td><h1><img src="img\land.png" alt="land" height="50" width="50">   </h1></td>
 	<td>	</td>
-	<td><h1><img src="coin.png" alt="coin" height="50" width="50">-50</h1></td>
+	<td><h1><img src="img\coin.png" alt="coin" height="50" width="50">-50</h1></td>
 	<td>	</td>
 	<td>	</td>
 	<?php
@@ -137,10 +137,10 @@ if ($rs=mysqli_fetch_array($results)) {
 ?>
 </table>
 <div id="menu"  >
-	<p><h1><img src="coin.png" alt="coin" height="150" width="150"></h1></p>
+	<p><h1><img src="img\coin.png" alt="coin" height="150" width="150"></h1></p>
 	<p><h1>NT <?php echo $rs['cashinhand']; ?></h1> </p>
-	<p><h1><img id="opener" src="package.png" alt="package" class="package" height="150" width="150"></h1></p>
-	<p><h1><a href="02.list.php"><img src="homeicon.png" alt="homeicon" height="150" width="150"></h1></p>
+	<p><h1><img id="opener" src="img\package.png" alt="package" class="package" height="150" width="150"></h1></p>
+	<p><h1><a href="02.list.php"><img src="img\homeicon.png" alt="homeicon" height="150" width="150"></h1></p>
     
 	</div>
 <?php
@@ -149,7 +149,7 @@ if ($rs=mysqli_fetch_array($results)) {
 <div id="dialog" title="背包" > <!--背包的內容-->
 <table width="800">
 <tr>
-	<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+	<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 	</br>
 	種植時間：
 	<?php
@@ -174,7 +174,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	?>
 	</td>
 	
-	<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+	<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 	</br>
 	種植時間：
 	<?php
@@ -199,7 +199,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	?>
 	</td>
 	
-	<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+	<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 	</br>
 	種植時間：
 	<?php
@@ -224,7 +224,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	?>
 	</td>
 
-	<td><img src="corn.png" alt="corn" height="100" width="100">
+	<td><img src="img\corn.png" alt="corn" height="100" width="100">
 	</br>
 	種植時間：
 	<?php
@@ -249,7 +249,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	?>	
 	</td>
 	
-	<td><img src="meat.png" alt="meat" height="100" width="100">
+	<td><img src="img\meat.png" alt="meat" height="100" width="100">
 	</br>
 	數量：
 	<?php
@@ -260,7 +260,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	?>	
 	</td>
 	
-	<td><img src="land.png" alt="land" height="100" width="100">
+	<td><img src="img\land.png" alt="land" height="100" width="100">
 	</br>
 	數量：
 	<?php

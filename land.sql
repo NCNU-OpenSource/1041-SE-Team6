@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2015 年 12 月 27 日 11:32
+-- 產生時間： 2015 年 12 月 27 日 17:02
 -- 伺服器版本: 5.6.26
 -- PHP 版本： 5.6.12
 
@@ -37,8 +37,8 @@ CREATE TABLE IF NOT EXISTS `land` (
 --
 
 INSERT INTO `land` (`id`, `status`, `item_onland`) VALUES
-(1, 0, 0),
-(2, 0, 0),
+(1, 1, 0),
+(2, 1, 0),
 (3, 0, 0),
 (4, 0, 0),
 (5, 0, 0),

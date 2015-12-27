@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2015 年 12 月 27 日 15:48
+-- 產生時間： 2015 年 12 月 27 日 17:01
 -- 伺服器版本: 5.6.26
 -- PHP 版本： 5.6.12
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `password`, `sex`, `cashinhand`, `lovecount`, `level`, `exp`, `carrot_qty`, `mushroom_qty`, `eggplant_qty`, `corn_qty`, `meat_qty`, `land_qty`) VALUES
-('111', '111', 'm', 100, 5, 5, 10, 4, 5, 5, 5, 7, 3),
+('111', '111', 'm', 100, 5, 5, 10, 4, 5, 5, 5, 7, 2),
 ('222', '222', 'f', 60, 3, 3, 0, 0, 0, 0, 0, 0, 0),
 ('william', 'william', 'm', 40, 2, 4, 0, 0, 0, 0, 0, 0, 0);
 
