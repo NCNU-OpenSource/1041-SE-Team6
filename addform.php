@@ -12,8 +12,8 @@
 <form method="post" action="insert.php">
   <h1>帳號 : <input type="text" name="id"><br /></h1>
   <h1>密碼 : <input type="text" name="password"><br /></h1>
-  <h1>性別 : <input type="radio" value="m"/> 男
-			<input type="radio" value="f"/> 女 </h1>
+  <h1>性別 : <input type="radio" name="sex" value="m"/> 男
+			<input type="radio" name="sex" value="f"/> 女 </h1>
 	<input type="submit" value="註冊">
 
 

@@ -21,9 +21,9 @@ mysqli_query($conn,"SET NAMES utf8"); //選擇編碼
 
 $id=mysqli_real_escape_string($conn,$_POST['id']);
 $password=mysqli_real_escape_string($conn,$_POST['password']);
-
+$sex=mysqli_real_escape_string($conn,$_POST['sex']);
 if ($id) {
-	$sql = "insert into user (id, password) values ('$id', '$password');";
+	$sql = "insert into user (id, password, sex) values ('$id', '$password', '$sex');";
 	mysqli_query($conn,$sql) or die("MySQL insert message error"); //執行SQL
 	echo "註冊成功  恭喜您成為正式玩家~.";
 	
