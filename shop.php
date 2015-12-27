@@ -251,51 +251,23 @@ if ($rs=mysqli_fetch_array($results)) {
 	
 	<td><img src="meat.png" alt="meat" height="100" width="100">
 	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='5';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
 	數量：
 	<?php
 	$sql = "select meat_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['meat_qty'];
-	?></br>
-	出售價：
-	<?php
-	$sql ="select item_outprice from package where id='5';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_outprice'];
 	?>	
 	</td>
 	
 	<td><img src="land.png" alt="land" height="100" width="100">
 	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='6';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
 	數量：
 	<?php
 	$sql = "select land_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['land_qty'];
-	?></br>
-	出售價：
-	<?php
-	$sql ="select item_outprice from package where id='6';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_outprice'];
 	?>	
 	</td>
 </tr>

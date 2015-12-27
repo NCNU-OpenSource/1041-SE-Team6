@@ -15,10 +15,6 @@ if($id<=0){
 	exit(0);
 }
 $lid=(int)$_GET['lid'];
-if($lid<=0){
-	echo "empty LID";
-	exit(0);
-}
 
 $userid=$_SESSION['uID'];
 $sqluser = "select * from user where id='".$userid."' ;";
@@ -27,6 +23,7 @@ $rsu=mysqli_fetch_array($rsuser);
 $sqlpack = "select * from package where id=$id;";
 $rspack=mysqli_query($conn,$sqlpack);
 $rsp=mysqli_fetch_array($rspack);
+
 
 if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 	if($id=='1' && $rsu['carrot_qty']>='1'){
@@ -40,7 +37,7 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql= "update land set item_onland='".$id."' where id='".$lid."';"; //將land的item_onland設為1(carrot)
 		mysqli_query($conn,$sql) or die("MySQL query error");
-		header("Location: 02.list.php");
+		header("Location:02.list.php");
 	}
 	else if($id=='2' && $rsu['mushroom_qty']>='1'){
 		$sql ="update user set lovecount=lovecount-".$rsp['item_hp']." where id='".$userid."';"; //user的心減少
@@ -53,7 +50,7 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql= "update land set item_onland='".$id."' where id='".$lid."';"; //將land的item_onland設為2(mushroom)
 		mysqli_query($conn,$sql) or die("MySQL query error");
-		header("Location: 02.list.php");
+		header("Location:02.list.php");
 	}
 	else if($id=='3' && $rsu['eggplant_qty']>='1'){
 		$sql ="update user set lovecount=lovecount-".$rsp['item_hp']." where id='".$userid."';"; //user的心減少
@@ -66,7 +63,8 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql= "update land set item_onland='".$id."' where id='".$lid."';"; //將land的item_onland設為3(eggplant)
 		mysqli_query($conn,$sql) or die("MySQL query error");
-		header("Location: 02.list.php");
+		header("Location:02.list.php");
+
 	}
 	else if($id=='4' && $rsu['corn_qty']>='1'){
 		$sql ="update user set lovecount=lovecount-".$rsp['item_hp']." where id='".$userid."';"; //user的心減少
@@ -79,7 +77,7 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql= "update land set item_onland='".$id."' where id='".$lid."';"; //將land的item_onland設為4(corn)
 		mysqli_query($conn,$sql) or die("MySQL query error");
-		header("Location: 02.list.php");
+		header("Location:02.list.php");
 	}
 	else if($id=='5' && $rsu['meat_qty']>='1'){
 		$sql ="update user set lovecount=lovecount+'1' where id='".$userid."';"; //user的心增加

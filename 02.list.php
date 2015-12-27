@@ -61,14 +61,8 @@ window.onload=function() {
 	coin.style.top=30+"px";
     coin.style.left=600+"px";
 	love.style.top=30+"px";
-    love.style.left=450+"px";
-	
-	
-	
-	
+    love.style.left=450+"px";	
 };
-
-
 
 </script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -134,7 +128,7 @@ $(function() {
       }
     }); 
     $( "#open_menu2" ).click(function() {
-      $( "#grow" ).dialog( "open" );
+      $( "#grow2" ).dialog( "open" );
     });
   });  
 $(function() {
@@ -164,7 +158,7 @@ $(function() {
       }
     }); 
     $( "#open_menu4" ).click(function() {
-      $( "#grow" ).dialog( "open" );
+      $( "#grow4" ).dialog( "open" );
     });
   });  
 $(function() {
@@ -194,7 +188,7 @@ $(function() {
       }
     }); 
     $( "#open_menu6" ).click(function() {
-      $( "#grow" ).dialog( "open" );
+      $( "#grow6" ).dialog( "open" );
     });
   });  
 $(function() {
@@ -293,6 +287,20 @@ $(function() {
 
 
 <body  style="background-color:#63FF63" >
+<?php
+$userid=$_SESSION['uID'];
+$sqlui="select * from user where id='".$userid."';";
+$resultsui=mysqli_query($conn,$sqlui);
+$rsui=mysqli_fetch_array($resultsui);
+
+if($rsui['exp']>=100){
+	$sql ="update user set level=level+'1' where id='".$userid."';";
+	mysqli_query($conn,$sql) or die("MySQL query error"); 
+	$sql ="update user set exp=exp-'100' where id='".$userid."';";
+	mysqli_query($conn,$sql) or die("MySQL query error");
+	echo "<script> window.location='02.list.php';</script>";
+}
+?>
 <div id="lv">LV.</div>
 <h1><?php
     $id=$_SESSION['uID'];
@@ -300,12 +308,6 @@ $(function() {
     echo"$id";
     echo"</div>";
 ?></h1>
-<?php
-$userid=$_SESSION['uID'];
-$sqlui="select * from user where id='".$userid."';";
-$resultsui=mysqli_query($conn,$sqlui);
-$rsui=mysqli_fetch_array($resultsui);
-?>
 <div id="coincount">
 <?php 
 echo $rsui['cashinhand'];
@@ -319,15 +321,6 @@ echo $rsui['lovecount'];
 <div id="level">
 <?php
 echo $rsui['level'];
-?>
-<?php
-if($rsui['exp']>=100){
-	$sql ="update user set level=level+'1' where id='".$userid."';";
-	mysqli_query($conn,$sql) or die("MySQL query error"); 
-	$sql ="update user set exp=exp-'100' where id='".$userid."';";
-	mysqli_query($conn,$sql) or die("MySQL query error");
-	header("Location: 02.list.php");
-}
 ?>
 </div>
 <a href="shop.php"><img id="shop" src="shop.png" alt="shop" class="shop" height="100" width="100"></a>
@@ -345,143 +338,8 @@ if($rsui['exp']>=100){
 <div id="dialog" title="背包" > <!--背包的內容-->
 <table width="800">
 <tr>
-	<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
-	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='1';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
-	數量：
-	<?php
-	$sql = "select carrot_qty from user where id='".$userid."';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['carrot_qty'];
-	?></br>
-	出售價：
-	<?php
-	$sql ="select item_outprice from package where id='1';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_outprice'];
-	?></br>
-	<?php
-	$sqlc = "select * from package where id='1';";
-	$results=mysqli_query($conn,$sqlc);
-	if ($rs=mysqli_fetch_array($results)) {
-	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
-	}
-	?>	
-	</td>
-	
-	<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
-	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='2';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
-	數量：
-	<?php
-	$sql = "select mushroom_qty from user where id='".$userid."';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['mushroom_qty'];
-	?></br>
-	出售價：
-	<?php
-	$sql ="select item_outprice from package where id='2';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_outprice'];
-	?></br>
-	<?php
-	$sqlc = "select * from package where id='2';";
-	$results=mysqli_query($conn,$sqlc);
-	if ($rs=mysqli_fetch_array($results)) {
-	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
-	}
-	?>	
-	</td>
-	
-	<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
-	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='3';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
-	數量：
-	<?php
-	$sql = "select eggplant_qty from user where id='".$userid."';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['eggplant_qty'];
-	?></br>
-	出售價：
-	<?php
-	$sql ="select item_outprice from package where id='3';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_outprice'];
-	?></br>
-	<?php
-	$sqlc = "select * from package where id='3';";
-	$results=mysqli_query($conn,$sqlc);
-	if ($rs=mysqli_fetch_array($results)) {
-	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
-	}
-	?>	
-	</td>
-
-	<td><img src="corn.png" alt="corn" height="100" width="100">
-	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='4';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
-	數量：
-	<?php
-	$sql = "select corn_qty from user where id='".$userid."';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['corn_qty'];
-	?></br>
-	出售價：
-	<?php
-	$sql ="select item_outprice from package where id='4';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_outprice'];
-	?></br>
-	<?php
-	$sqlc = "select * from package where id='4';";
-	$results=mysqli_query($conn,$sqlc);
-	if ($rs=mysqli_fetch_array($results)) {
-	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
-	}
-	?>	
-	</td>
-	
 	<td><img src="meat.png" alt="meat" height="100" width="100">
 	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='5';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
 	數量：
 	<?php
 	$sql = "select meat_qty from user where id='".$userid."';";
@@ -507,35 +365,115 @@ if($rsui['exp']>=100){
 	
 	<td><img src="land.png" alt="land" height="100" width="100">
 	</br>
-	種植時間：
-	<?php
-	$sql ="select item_time from package where id='6';";
-	$results=mysqli_query($conn,$sql);
-	$rs=mysqli_fetch_array($results);
-	echo $rs['item_time'];
-	?></br>
 	數量：
 	<?php
 	$sql = "select land_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['land_qty'];
+	?>	
+	</td>
+	
+	<td><img src="carrot.png" alt="carrot" height="100" width="100"> 
+	</br>
+	種植時間：
+	<?php
+	$sql ="select item_time from package where id='1';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_time'];
+	?></br>
+	數量：
+	<?php
+	$sql = "select carrot_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['carrot_qty'];
 	?></br>
 	出售價：
 	<?php
-	$sql ="select item_outprice from package where id='6';";
+	$sql ="select item_outprice from package where id='1';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['item_outprice'];
-	?></br>
-	<?php
-	$sqlc = "select * from package where id='6';";
-	$results=mysqli_query($conn,$sqlc);
-	if ($rs=mysqli_fetch_array($results)) {
-	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
-	}
-	?>	
+	?>
 	</td>
+	
+	<td><img src="mushroom.png" alt="mushroom" height="100" width="100">
+	</br>
+	種植時間：
+	<?php
+	$sql ="select item_time from package where id='2';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_time'];
+	?></br>
+	數量：
+	<?php
+	$sql = "select mushroom_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['mushroom_qty'];
+	?></br>
+	出售價：
+	<?php
+	$sql ="select item_outprice from package where id='2';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_outprice'];
+	?>
+	</td>
+	
+	<td><img src="eggplant.png" alt="eggplant" height="100" width="100">
+	</br>
+	種植時間：
+	<?php
+	$sql ="select item_time from package where id='3';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_time'];
+	?></br>
+	數量：
+	<?php
+	$sql = "select eggplant_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['eggplant_qty'];
+	?></br>
+	出售價：
+	<?php
+	$sql ="select item_outprice from package where id='3';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_outprice'];
+	?>
+	</td>
+
+	<td><img src="corn.png" alt="corn" height="100" width="100">
+	</br>
+	種植時間：
+	<?php
+	$sql ="select item_time from package where id='4';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_time'];
+	?></br>
+	數量：
+	<?php
+	$sql = "select corn_qty from user where id='".$userid."';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['corn_qty'];
+	?></br>
+	出售價：
+	<?php
+	$sql ="select item_outprice from package where id='4';";
+	$results=mysqli_query($conn,$sql);
+	$rs=mysqli_fetch_array($results);
+	echo $rs['item_outprice'];
+	?>
+	</td>
+
 </tr>
 </table>  
 </div>
@@ -809,7 +747,7 @@ if($rsui['exp']>=100){
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			</br><img id="open_menu4" src="p2.png" height="100" width="100">
+			<img id="open_menu4" src="p2.png" height="100" width="100">
 		
 			<div id="grow4" title="可種植" > <!--可種植的內容-->
 			<table width="300">
