@@ -42,7 +42,7 @@ table{position:absolute;top: 120px;left:10px;}
   
 </script>
 
-<body style="background-image:url(p4.png)">
+<body style="background-image:url(img\\p4.png)">
 <table  width="950" height="100">
 
 <tr>

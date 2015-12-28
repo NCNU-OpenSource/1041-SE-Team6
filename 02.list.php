@@ -67,7 +67,7 @@ function b(){
 new Countdown({
     selector: '.timer',
     
-    msgAfter: "<?php echo "<img src='img\ctrl.png'>";
+    msgAfter: "<?php echo "<img src=\'img\\ctrl.png\' >";
 	
 	?>",
 	
@@ -361,7 +361,7 @@ if($rsui['sex']=='m'){
 <img id="coin" src="img\coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="img\love.png" alt="love" class="love" height="50" width="50">
 <a href="shop.php"><img id="shop" src="img\shop.png" alt="shop" class="shop" height="100" width="100"></a>
-<a href="login.php"><img id="ctrl" src="img\ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
+<a href="login.php"><img id="ctrl" src="img\exit.png" alt="logout" class="ctrl" height="100" width="100"></a>
 
 
 <div id="package">
