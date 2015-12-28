@@ -14,7 +14,9 @@ require("config.php");
 <style type="text/css">
 
 h1 { text-align: center}
-#menu{position:absolute;top:40px;left:1100px; }
+body {background-size: cover;} /*背景滿版*/
+table{position:absolute;top: 120px;left:10px;}
+#menu{position:absolute;top:100px;left:1100px; }
 </style>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -40,7 +42,7 @@ h1 { text-align: center}
   
 </script>
 
-<body style="background-image:url(p4.jpg)">
+<body style="background-image:url(p4.png)">
 <table  width="950" height="100">
 
 <tr>
