@@ -4,13 +4,16 @@ require("config.php");
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主畫面</title>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  
- 
+ <script  type="text/javascript" src="countdown.min.js">
+</script> 
+
 </head>
 <style type="text/css">
+
 h1 {padding:5px;  text-align: center}
 #content{position:absolute;top: 200px;left:600px;}
 #lovecount{position:absolute;top: 40px;left:535px;font-size: 20pt}
@@ -19,6 +22,7 @@ h1 {padding:5px;  text-align: center}
 #lv{position:absolute;top: 40px;left:155px;font-size: 20pt}
 #progressbar{position:fixed;top:40px;left:240px;font-size: 10pt; }
 #package{position:fixed;top:300px;left:200px; }
+#time{position:fixed;top:250px;left:650px; }
  body {
   width: 480px ;
  margin:175px auto; 
@@ -59,11 +63,36 @@ window.onload=function() {
 	love.style.top=30+"px";
     love.style.left=450+"px";	
 };
+function b(){
+new Countdown({
+    selector: '.timer',
+    
+    msgAfter: "<?php echo "<img src='img\ctrl.png'>";
+	
+	?>",
+	
+    msgPattern: "{seconds}",
+    dateStart: new Date(),
+    dateEnd: new Date((new Date).getTime()+(10000)),
+	
+	
+
+    onStart: function() {
+                console.log('start');
+            },
+	
+    onEnd: function() { 
+                console.log('end');
+            },
+	
+});
+}
 </script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script>
+  
   $(function() {
     $( "#progressbar" ).progressbar({
 		
@@ -278,9 +307,10 @@ $(function() {
 </script>
 
 
-
-
 <body  style="background-color:#63FF63" >
+
+<h1><div style="z-index:1000;" id="time" class="timer"></div></h1>
+
 <?php
 $userid=$_SESSION['uID'];
 $sqlui="select * from user where id='".$userid."';";
@@ -295,6 +325,8 @@ if($rsui['exp']>=100){
 }
 ?>
 <div id="lv">LV.</div>
+
+
 <h1><?php
     $id=$_SESSION['uID'];
     echo"<div id=\"top\">";
@@ -311,11 +343,13 @@ echo $rsui['cashinhand'];
 echo $rsui['lovecount'];
 ?>
 </div>
+
 <div id="level">
 <?php
 echo $rsui['level'];
 ?>
 </div>
+
 <?php
 if($rsui['sex']=='m'){
 	echo "<img id=\"people\" src=\"img\boy.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
@@ -327,10 +361,11 @@ if($rsui['sex']=='m'){
 <img id="coin" src="img\coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="img\love.png" alt="love" class="love" height="50" width="50">
 <a href="shop.php"><img id="shop" src="img\shop.png" alt="shop" class="shop" height="100" width="100"></a>
-<a href="login.php"><img id="ctrl" src="img\離開1.png" alt="logout" class="ctrl" height="80" width="120"></a>
+<a href="login.php"><img id="ctrl" src="img\ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
 
 
 <div id="package">
+
 <img id="opener" src="img\package.png" alt="package" class="package" height="150" width="150">
 </div>
 
@@ -507,6 +542,7 @@ if($rsui['sex']=='m'){
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
 				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
+				
 				}
 				?>	
 				</td>
@@ -552,7 +588,14 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				
+				echo "<script>b()</script>";
+				
+           
+		   
+		   
 			}
+			
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
 			}
