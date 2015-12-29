@@ -62,20 +62,23 @@ window.onload=function() {
     coin.style.left=600+"px";
 	love.style.top=30+"px";
     love.style.left=450+"px";	
+	
 };
-function b(){
+</script>
+<?php
+$sqlcd= "select * from land where status=2";
+$resultscd=mysqli_query($conn,$sqlcd);
+$rscd=mysqli_fetch_array($resultscd);
+?>
+<script>
+function b() {
 new Countdown({
     selector: '.timer',
-    
-    msgAfter: "<?php echo "<img src=\'img\\ctrl.png\' >";
-	
-	?>",
-	
+    msgBefore: "",
+    msgAfter: "<?php echo "<img src='img/exp.png'>";?>",
     msgPattern: "{seconds}",
     dateStart: new Date(),
-    dateEnd: new Date((new Date).getTime()+(10000)),
-	
-	
+    dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rscd['endtime'])?>'),
 
     onStart: function() {
                 console.log('start');
@@ -361,7 +364,7 @@ if($rsui['sex']=='m'){
 <img id="coin" src="img\coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="img\love.png" alt="love" class="love" height="50" width="50">
 <a href="shop.php"><img id="shop" src="img\shop.png" alt="shop" class="shop" height="100" width="100"></a>
-<a href="login.php"><img id="ctrl" src="img\exit.png" alt="logout" class="ctrl" height="100" width="100"></a>
+<a href="login.php"><img id="ctrl" src="img\ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
 
 
 <div id="package">
@@ -590,10 +593,9 @@ if($rsui['sex']=='m'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
 				
 				echo "<script>b()</script>";
-				
-           
-		   
-		   
+		       // $sql= "update land set status='3' where id='1';"; //將land的status設為3(收成)
+				//mysqli_query($conn,$sql) or die("MySQL query error");        
+	              
 			}
 			
 			else if($rs['item_onland']=='2'){
@@ -610,6 +612,7 @@ if($rsui['sex']=='m'){
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 			}
 		}
+
 	?></td>
 	<td><?php
 		$sql ="select * from land where id='2';"; //land 2
