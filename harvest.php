@@ -34,6 +34,8 @@ $rsp=mysqli_fetch_array($rspack);
 		$sql= "update land set status='1' where id='".$lid."';"; //將land的status設為1(田)
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		
+		$sql ="update user set cashinhand=cashinhand+".$rsp['item_price']." where id='".$userid."';"; //經驗增加
+		mysqli_query($conn,$sql) or die("MySQL query error");
 		header("Location:02.list.php");
 	}
 	else if($id=='2' ){
@@ -43,6 +45,8 @@ $rsp=mysqli_fetch_array($rspack);
 		$sql= "update land set status='1' where id='".$lid."';"; //將land的status設為1(田)
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		
+		$sql ="update user set cashinhand=cashinhand+".$rsp['item_price']." where id='".$userid."';"; //經驗增加
+		mysqli_query($conn,$sql) or die("MySQL query error");
 		header("Location:02.list.php");
 	}
 	else if($id=='3'){
@@ -52,6 +56,8 @@ $rsp=mysqli_fetch_array($rspack);
 		$sql= "update land set status='1' where id='".$lid."';"; //將land的status設為1(田)
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		
+		$sql ="update user set cashinhand=cashinhand+".$rsp['item_price']." where id='".$userid."';"; //經驗增加
+		mysqli_query($conn,$sql) or die("MySQL query error");
 		header("Location:02.list.php");
 
 	}
@@ -62,6 +68,8 @@ $rsp=mysqli_fetch_array($rspack);
 		$sql= "update land set status='1' where id='".$lid."';"; //將land的status設為1(田)
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		
+		$sql ="update user set cashinhand=cashinhand+".$rsp['item_price']." where id='".$userid."';"; //經驗增加
+		mysqli_query($conn,$sql) or die("MySQL query error");
 		header("Location:02.list.php");
 	}
 	
