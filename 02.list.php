@@ -8,7 +8,7 @@ require("config.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主畫面</title>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
- <script  type="text/javascript" src="countdown.min.js">
+<script  type="text/javascript" src="countdown.min.js">
 </script> 
 
 </head>
@@ -22,7 +22,8 @@ h1 {padding:5px;  text-align: center}
 #lv{position:absolute;top: 40px;left:155px;font-size: 20pt}
 #progressbar{position:fixed;top:40px;left:240px;font-size: 10pt; }
 #package{position:fixed;top:300px;left:200px; }
-#time{position:fixed;top:250px;left:650px; }
+#time1{position:fixed;top:250px;left:650px; }
+#time2{position:fixed;top:250px;left:750px; }
  body {
   width: 480px ;
  margin:175px auto; 
@@ -77,17 +78,17 @@ $rsb=mysqli_fetch_array($resultsb);
 function start() {
 
 	new Countdown({
-		selector: '.timer',
+		selector: '.timer1',
 		msgBefore: "",
 		msgAfter: "<?php echo "<img src='img/crop.png' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
 		onStart: function() {
-                console.log('start');
+            console.log('start');
             },
 		onEnd: function() { 
-                console.log('end');
+            console.log('end');
             },
 	});
 
@@ -314,8 +315,8 @@ $(function() {
 
 <body  style="background-color:#63FF63" >
 
-<h1><div style="z-index:1000;" id="time" class="timer"></div></h1>
-<h1><div style="z-index:1000;" id="time" class="timer2"></div></h1>
+<h1><div style="z-index:1000;" id="time1" class="timer1"></div></h1>
+<h1><div style="z-index:1000;" id="time2" class="timer2"></div></h1>
 
 <?php
 $userid=$_SESSION['uID'];
@@ -367,7 +368,7 @@ if($rsui['sex']=='m'){
 <img id="coin" src="img\coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="img\love.png" alt="love" class="love" height="50" width="50">
 <a href="shop.php"><img id="shop" src="img\shop.png" alt="shop" class="shop" height="100" width="100"></a>
-<a href="login.php"><img id="ctrl" src="img\ctrl.png" alt="logout" class="ctrl" height="100" width="100"></a>
+<a href="login.php"><img id="ctrl" src="img\exit.png" alt="logout" class="ctrl" height="100" width="100"></a>
 
 
 <div id="package">
