@@ -37,13 +37,13 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql= "update land set item_onland='".$id."' where id='".$lid."';"; //將land的item_onland設為1(carrot)
 		mysqli_query($conn,$sql) or die("MySQL query error");
-		$sqlc = "select * from package where id='1';";
-				$results=mysqli_query($conn,$sqlc);
-				$rsc=mysqli_fetch_array($results);
-				$time=date('U');
-				$time=$time+25200;
-				$sqlat="update land set endtime=$time+".$rsc['item_time']." where id='1'";
-				mysqli_query($conn,$sqlat)or die("MySQL query error");
+		$sqlc = "select * from package where id='1';"; //設定倒數結束時間
+		$results=mysqli_query($conn,$sqlc);
+		$rsc=mysqli_fetch_array($results);
+		$time=date('U');
+		$time=$time+25200;
+		$sqlat="update land set endtime=$time+".$rsc['item_time']." where id='".$lid."';";
+		mysqli_query($conn,$sqlat)or die("MySQL query error");
 		header("Location:02.list.php");
 	}
 	else if($id=='2' && $rsu['mushroom_qty']>='1'){
@@ -57,6 +57,13 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql= "update land set item_onland='".$id."' where id='".$lid."';"; //將land的item_onland設為2(mushroom)
 		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sqlc = "select * from package where id='2';"; //設定倒數結束時間
+		$results=mysqli_query($conn,$sqlc);
+		$rsc=mysqli_fetch_array($results);
+		$time=date('U');
+		$time=$time+25200;
+		$sqlat="update land set endtime=$time+".$rsc['item_time']." where id='".$lid."';";
+		mysqli_query($conn,$sqlat)or die("MySQL query error");
 		header("Location:02.list.php");
 	}
 	else if($id=='3' && $rsu['eggplant_qty']>='1'){
@@ -70,6 +77,13 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql= "update land set item_onland='".$id."' where id='".$lid."';"; //將land的item_onland設為3(eggplant)
 		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sqlc = "select * from package where id='3';"; //設定倒數結束時間
+		$results=mysqli_query($conn,$sqlc);
+		$rsc=mysqli_fetch_array($results);
+		$time=date('U');
+		$time=$time+25200;
+		$sqlat="update land set endtime=$time+".$rsc['item_time']." where id='".$lid."';";
+		mysqli_query($conn,$sqlat)or die("MySQL query error");
 		header("Location:02.list.php");
 
 	}
@@ -84,6 +98,13 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		mysqli_query($conn,$sql) or die("MySQL query error");
 		$sql= "update land set item_onland='".$id."' where id='".$lid."';"; //將land的item_onland設為4(corn)
 		mysqli_query($conn,$sql) or die("MySQL query error");
+		$sqlc = "select * from package where id='4';"; //設定倒數結束時間
+		$results=mysqli_query($conn,$sqlc);
+		$rsc=mysqli_fetch_array($results);
+		$time=date('U');
+		$time=$time+25200;
+		$sqlat="update land set endtime=$time+".$rsc['item_time']." where id='".$lid."';";
+		mysqli_query($conn,$sqlat)or die("MySQL query error");
 		header("Location:02.list.php");
 	}
 	else if($id=='5' && $rsu['meat_qty']>='1'){

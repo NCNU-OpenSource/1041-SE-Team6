@@ -66,29 +66,31 @@ window.onload=function() {
 };
 </script>
 <?php
-$sqlcd= "select * from land where status=2";
-$resultscd=mysqli_query($conn,$sqlcd);
-$rscd=mysqli_fetch_array($resultscd);
+$sqla= "select count(*) as c from land where status=2";
+$resultsa=mysqli_query($conn,$sqla);
+$rsa=mysqli_fetch_array($resultsa);
+$sqlb= "select * from land where status=2";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
 ?>
 <script>
-function b() {
-new Countdown({
-    selector: '.timer',
-    msgBefore: "",
-    msgAfter: "<?php echo "<img src='img/exp.png'>";?>",
-    msgPattern: "{seconds}",
-    dateStart: new Date(),
-    dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rscd['endtime'])?>'),
+function start() {
 
-    onStart: function() {
+	new Countdown({
+		selector: '.timer',
+		msgBefore: "",
+		msgAfter: "<?php echo "<img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
                 console.log('start');
             },
-	
-    onEnd: function() { 
+		onEnd: function() { 
                 console.log('end');
             },
-	
-});
+	});
+
 }
 </script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -313,6 +315,7 @@ $(function() {
 <body  style="background-color:#63FF63" >
 
 <h1><div style="z-index:1000;" id="time" class="timer"></div></h1>
+<h1><div style="z-index:1000;" id="time" class="timer2"></div></h1>
 
 <?php
 $userid=$_SESSION['uID'];
@@ -591,21 +594,20 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
-				
-				echo "<script>b()</script>";
-		       // $sql= "update land set status='3' where id='1';"; //將land的status設為3(收成)
-				//mysqli_query($conn,$sql) or die("MySQL query error");        
-	              
+				echo "<script>start()</script>";        
 			}
 			
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start()</script>";
 			}
 		
 			else{
@@ -683,15 +685,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
