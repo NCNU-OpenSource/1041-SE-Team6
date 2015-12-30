@@ -16,11 +16,11 @@ require("config.php");
 
 h1 {padding:5px;  text-align: center}
 #content{position:absolute;top: 200px;left:600px;}
-#lovecount{position:absolute;top: 40px;left:535px;font-size: 20pt}
-#coincount{position:absolute;top: 40px;left:680px;font-size: 20pt}
-#level{position:absolute;top: 40px;left:210px;font-size: 20pt}
-#lv{position:absolute;top: 40px;left:155px;font-size: 20pt}
-#progressbar{position:fixed;top:40px;left:240px;font-size: 10pt; }
+#lovecount{position:absolute;top: 10px;left:635px;font-size: 20pt}
+#coincount{position:absolute;top: 10px;left:780px;font-size: 20pt}
+#level{position:absolute;top: 10px;left:360px;font-size: 20pt}
+#lv{position:absolute;top: 10px;left:305px;font-size: 20pt}
+#progressbar{position:fixed;top:70px;left:240px;font-size: 10pt; }
 #package{position:fixed;top:300px;left:200px; }
 #time1{position:fixed;top:250px;left:650px; }
 #time2{position:fixed;top:250px;left:750px; }
@@ -34,19 +34,20 @@ h1 {padding:5px;  text-align: center}
 #time10{position:fixed;top:450px;left:750px; }
 #time11{position:fixed;top:450px;left:850px; }
 #time12{position:fixed;top:450px;left:950px; }
-
-
- body {
-  width: 480px ;
- margin:175px auto; 
- }
 #top{
     position:absolute;
     top: 110px;
-    left:60px;
+    left:100px;
     font-size: 20pt
     text-align:center;
 }  
+
+ body {
+	position:fixed ;
+ left:10px; 
+ margin:20px auto; 
+ }
+
  .shop{
 position:absolute;
 }
@@ -65,16 +66,16 @@ position:absolute;
 </style>
 <script type="text/javascript">
 window.onload=function() {
-    shop.style.top=30+"px";
-    shop.style.left=900+"px";
-	ctrl.style.top=30+"px";
-    ctrl.style.left=1000+"px";
+    shop.style.top=0+"px";
+    shop.style.left=1100+"px";
+	ctrl.style.top=0+"px";
+    ctrl.style.left=1200+"px";
 	people.style.top=10+"px";
-    people.style.left=50+"px";
-	coin.style.top=30+"px";
-    coin.style.left=600+"px";
-	love.style.top=30+"px";
-    love.style.left=450+"px";	
+    people.style.left=80+"px";
+	coin.style.top=0+"px";
+    coin.style.left=700+"px";
+	love.style.top=0+"px";
+    love.style.left=550+"px";	
 	
 };
 </script>
@@ -598,7 +599,7 @@ $(function() {
 </script>
 
 
-<body  style="background-color:#63FF63" >
+<body  style="background-image:url(img/mainpage.jpg)" >
 
 <h1><div style="z-index:10;" id="time1" class="timer1"></div></h1>
 <h1><div style="z-index:10;" id="time2" class="timer2"></div></h1>
@@ -612,10 +613,6 @@ $(function() {
 <h1><div style="z-index:10;" id="time10" class="timer10"></div></h1>
 <h1><div style="z-index:10;" id="time11" class="timer11"></div></h1>
 <h1><div style="z-index:10;" id="time12" class="timer12"></div></h1>
-
-
-
-
 <?php
 $userid=$_SESSION['uID'];
 $sqlui="select * from user where id='".$userid."';";
@@ -630,8 +627,6 @@ if($rsui['exp']>=100){
 }
 ?>
 <div id="lv">LV.</div>
-
-
 <h1><?php
     $id=$_SESSION['uID'];
     echo"<div id=\"top\">";
@@ -648,13 +643,11 @@ echo $rsui['cashinhand'];
 echo $rsui['lovecount'];
 ?>
 </div>
-
 <div id="level">
 <?php
 echo $rsui['level'];
 ?>
 </div>
-
 <?php
 if($rsui['sex']=='m'){
 	echo "<img id=\"people\" src=\"img\boy.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
@@ -662,19 +655,16 @@ if($rsui['sex']=='m'){
 	echo "<img id=\"people\" src=\"img\girl.png\" alt=\"people\" class=\"people\" height=\"100\" width=\"100\">";
 }
 ?>
-
 <img id="coin" src="img\coin.png" alt="coin" class="coin" height="50" width="50">
 <img id="love" src="img\love.png" alt="love" class="love" height="50" width="50">
 <a href="shop.php"><img id="shop" src="img\shop.png" alt="shop" class="shop" height="100" width="100"></a>
 <a href="login.php"><img id="ctrl" src="img\exit.png" alt="logout" class="ctrl" height="100" width="100"></a>
-
-
 <div id="package">
 
 <img id="opener" src="img\package.png" alt="package" class="package" height="150" width="150">
 </div>
 
-<div id="progressbar" style="width:180px" ></div>
+<div id="progressbar" style="width:250px" ></div>
 
 <div id="dialog" title="背包" > <!--背包的內容-->
 <table width="800">
@@ -702,8 +692,7 @@ if($rsui['sex']=='m'){
 	echo"<a href='down_package.php?id=",$rs['id'],"'>使用</a>";
 	}
 	?>	
-	</td>
-	
+	</td>	
 	<td><img src="img\land.png" alt="land" height="100" width="100">
 	</br>
 	數量：
@@ -713,8 +702,7 @@ if($rsui['sex']=='m'){
 	$rs=mysqli_fetch_array($results);
 	echo $rs['land_qty'];
 	?>	
-	</td>
-	
+	</td>	
 	<td><img src="img\carrot.png" alt="carrot" height="100" width="100">
 	</br>
 	數量：
@@ -739,8 +727,7 @@ if($rsui['sex']=='m'){
 	$rs=mysqli_fetch_array($results);
 	echo $rs['item_outprice'];
 	?>
-	</td>
-	
+	</td>	
 	<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 	</br>
 	數量：
@@ -765,8 +752,7 @@ if($rsui['sex']=='m'){
 	$rs=mysqli_fetch_array($results);
 	echo $rs['item_outprice'];
 	?>
-	</td>
-	
+	</td>	
 	<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 	</br>
 	數量：
@@ -792,7 +778,6 @@ if($rsui['sex']=='m'){
 	echo $rs['item_outprice'];
 	?>
 	</td>
-
 	<td><img src="img\corn.png" alt="corn" height="100" width="100">
 	</br>
 	數量：
@@ -818,7 +803,6 @@ if($rsui['sex']=='m'){
 	echo $rs['item_outprice'];
 	?>
 	</td>
-
 </tr>
 </table>  
 </div>
@@ -895,7 +879,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start1()</script>";        
 			}
 			
