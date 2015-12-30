@@ -15,7 +15,6 @@ require("config.php");
 <style type="text/css">
 body{
 	background-image:url(img/mainpage.jpg);
-	background-size: cover;
 	background-repeat: no-repeat; 
 }
 h1 {padding:5px;  text-align: center}

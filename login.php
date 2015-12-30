@@ -46,8 +46,9 @@ h1 {padding:5px;  text-align: center}
 body {width: 550px;
  margin:90px auto;
  font-size:14pt;
- background-image:url(img/p1.jpg);
+ background-image:url(img/rg.jpg);
  background-attachment:fixed;
+ background-repeat: no-repeat; 
  }
 #content {color:black; }
  
@@ -68,8 +69,6 @@ input {font-size:20pt}
 </h1>
 </form>
 </div>
-
-
 
 </body>
 </html>
