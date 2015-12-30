@@ -186,7 +186,7 @@ if ($rs=mysqli_fetch_array($results)) {
 }
 ?>
 <div id="dialog" title="背包" > <!--背包的內容-->
-<table>
+<table width="900">
 <tr>
 	<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 	</br>
@@ -212,7 +212,6 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['item_outprice'];
 	?>
 	</td>
-	
 	<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
 	</br>
 	種植時間：
@@ -236,8 +235,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	$rs=mysqli_fetch_array($results);
 	echo $rs['item_outprice'];
 	?>
-	</td>
-	
+	</td>	
 	<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
 	</br>
 	種植時間：
@@ -262,7 +260,6 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['item_outprice'];
 	?>
 	</td>
-
 	<td><img src="img\corn.png" alt="corn" height="100" width="100">
 	</br>
 	種植時間：
@@ -287,7 +284,6 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['item_outprice'];
 	?>	
 	</td>
-	
 	<td><img src="img\meat.png" alt="meat" height="100" width="100">
 	</br>
 	數量：
@@ -298,7 +294,6 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['meat_qty'];
 	?>	
 	</td>
-	
 	<td><img src="img\land.png" alt="land" height="100" width="100">
 	</br>
 	數量：

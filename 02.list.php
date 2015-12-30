@@ -13,7 +13,11 @@ require("config.php");
 
 </head>
 <style type="text/css">
-
+body{
+	background-image:url(img/mainpage.jpg);
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
 h1 {padding:5px;  text-align: center}
 #content{position:absolute;top: 200px;left:600px;}
 #lovecount{position:absolute;top: 10px;left:635px;font-size: 20pt}
@@ -90,7 +94,7 @@ function start1() {
 	new Countdown({
 		selector: '.timer1',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -116,7 +120,7 @@ function start2() {
 	new Countdown({
 		selector: '.timer2',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -141,7 +145,7 @@ function start3() {
 	new Countdown({
 		selector: '.timer3',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -166,7 +170,7 @@ function start4() {
 	new Countdown({
 		selector: '.timer4',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -191,7 +195,7 @@ function start5() {
 	new Countdown({
 		selector: '.timer5',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -216,7 +220,7 @@ function start6() {
 	new Countdown({
 		selector: '.timer6',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -241,7 +245,7 @@ function start7() {
 	new Countdown({
 		selector: '.timer7',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -266,7 +270,7 @@ function start8() {
 	new Countdown({
 		selector: '.timer8',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -291,7 +295,7 @@ function start9() {
 	new Countdown({
 		selector: '.timer9',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -316,7 +320,7 @@ function start10() {
 	new Countdown({
 		selector: '.timer10',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -341,7 +345,7 @@ function start11() {
 	new Countdown({
 		selector: '.timer11',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -366,7 +370,7 @@ function start12() {
 	new Countdown({
 		selector: '.timer12',
 		msgBefore: "",
-		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/shovel.gif' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -599,7 +603,7 @@ $(function() {
 </script>
 
 
-<body  style="background-image:url(img/mainpage.jpg)" >
+<body>
 
 <h1><div style="z-index:10;" id="time1" class="timer1"></div></h1>
 <h1><div style="z-index:10;" id="time2" class="timer2"></div></h1>
@@ -660,7 +664,6 @@ if($rsui['sex']=='m'){
 <a href="shop.php"><img id="shop" src="img\shop.png" alt="shop" class="shop" height="100" width="100"></a>
 <a href="login.php"><img id="ctrl" src="img\exit.png" alt="logout" class="ctrl" height="100" width="100"></a>
 <div id="package">
-
 <img id="opener" src="img\package.png" alt="package" class="package" height="150" width="150">
 </div>
 
@@ -819,11 +822,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu" src="img\grass.png" height="100" width="100">
+			<img id="open_menu" src="img\farm.png" height="100" width="100">
 		
 			<div  id="grow" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -892,7 +895,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start1()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start1()</script>";
 			}
 			else{
@@ -909,11 +912,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu2" src="img\grass.png" height="100" width="100">
+			<img id="open_menu2" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow2" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -969,7 +972,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start2()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -981,7 +984,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start2()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start2()</script>";
 			}
 			else{
@@ -997,11 +1000,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu3" src="img\grass.png" height="100" width="100">
+			<img id="open_menu3" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow3" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1057,7 +1060,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start3()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1069,7 +1072,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start3()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start3()</script>";
 			}
 			else{
@@ -1085,11 +1088,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu4" src="img\grass.png" height="100" width="100">
+			<img id="open_menu4" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow4" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1145,7 +1148,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start4()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1157,7 +1160,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start4()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start4()</script>";
 			}
 			else{
@@ -1175,11 +1178,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu5" src="img\grass.png" height="100" width="100">
+			<img id="open_menu5" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow5" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1235,7 +1238,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start5()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1247,7 +1250,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start5()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start5()</script>";
 			}
 			else{
@@ -1264,11 +1267,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu6" src="img\grass.png" height="100" width="100">
+			<img id="open_menu6" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow6" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1324,7 +1327,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start6()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1336,7 +1339,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start6()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start6()</script>";
 			}
 			else{
@@ -1353,11 +1356,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu7" src="img\grass.png" height="100" width="100">
+			<img id="open_menu7" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow7" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1413,7 +1416,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start7()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1425,7 +1428,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start7()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start7()</script>";
 			}
 			else{
@@ -1441,11 +1444,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';"; 
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu8" src="img\grass.png" height="100" width="100">
+			<img id="open_menu8" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow8" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1501,7 +1504,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start8()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1513,7 +1516,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start8()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start8()</script>";
 			}
 			else{
@@ -1531,11 +1534,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu9" src="img\grass.png" height="100" width="100">
+			<img id="open_menu9" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow9" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1591,7 +1594,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start9()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1603,7 +1606,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start9()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start9()</script>";
 			}
 			else{
@@ -1619,11 +1622,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu10" src="img\grass.png" height="100" width="100">
+			<img id="open_menu10" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow10" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1679,7 +1682,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start10()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1691,7 +1694,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start10()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start10()</script>";
 			}
 			else{
@@ -1707,11 +1710,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu11" src="img\grass.png" height="100" width="100">
+			<img id="open_menu11" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow11" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1767,7 +1770,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start11()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1779,7 +1782,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start11()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start11()</script>";
 			}
 			else{
@@ -1795,11 +1798,11 @@ if($rsui['sex']=='m'){
 			$sqlc= "select * from package where id='6';";
 			$results=mysqli_query($conn,$sqlc);
 			$rsc=mysqli_fetch_array($results);
-			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\farm.png\" height=\"100\" width=\"100\">"; 
+			echo "<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'><img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 		}
 		else if($rs['status']=='1'){ //可種植
 		?>
-			<img id="open_menu12" src="img\grass.png" height="100" width="100">
+			<img id="open_menu12" src="img\farm.png" height="100" width="100">
 		
 			<div id="grow12" title="可種植" > <!--可種植的內容-->
 			<table width="300">
@@ -1855,7 +1858,7 @@ if($rsui['sex']=='m'){
 		}
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
-				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\carrot_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start12()</script>";
 			}
 			else if($rs['item_onland']=='2'){
@@ -1867,7 +1870,7 @@ if($rsui['sex']=='m'){
 				echo "<script>start12()</script>";
 			}
 			else if($rs['item_onland']=='4'){
-				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<img src=\"img\\corn_grow.gif\" height=\"100\" width=\"100\">";
 				echo "<script>start12()</script>";
 			}
 			else{
