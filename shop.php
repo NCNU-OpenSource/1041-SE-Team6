@@ -16,7 +16,7 @@ require("config.php");
 h1 { text-align: center}
 body {background-size: cover;} /*背景滿版*/
 table{position:absolute;top: 20px;left:10px;}
-#menu{position:absolute;top:60px;left:1100px; }
+#menu{position:absolute;top:60px;left:1100px;}
 </style>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -44,7 +44,6 @@ table{position:absolute;top: 20px;left:10px;}
 
 <body style="background-image:url(img\\p4.png)">
 <table  width="1000" height="200">
-
 <tr>
 	<td><h1><img src="img\carrot.png" alt="carrot" height="50" width="50">10秒</h1></td>
 	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> -1</h1></td>
@@ -62,7 +61,7 @@ table{position:absolute;top: 20px;left:10px;}
 	}
 	
 	?>	
-<tr/>
+</tr>
 <tr>
 	<td><h1><img src="img\mushroom.png" alt="mushroom" height="50" width="50">30秒</h1></td>
 	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> -1</h1></td>
@@ -89,7 +88,7 @@ table{position:absolute;top: 20px;left:10px;}
 	}
 	
 	?>
-<tr/>
+</tr>
 <tr>
 	<td><h1><img src="img\eggplant.png" alt="eggplant" height="50" width="50">50秒</h1></td>
 	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> -1</h1></td>
@@ -113,7 +112,7 @@ table{position:absolute;top: 20px;left:10px;}
 		echo"<td><h1>未解鎖</h1></td>";
 	}
 	?>
-<tr/>
+</tr>
 <tr>
 	<td><h1><img src="img\corn.png" alt="corn" height="50" width="50">60秒</h1></td>
 	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> -1</h1></td>
@@ -137,7 +136,7 @@ table{position:absolute;top: 20px;left:10px;}
 		echo"<td><h1>未解鎖</h1></td>";
 	}
 	?>
-<tr/>
+</tr>
 <tr>
 	<td><h1><img src="img\meat.png" alt="meat" height="50" width="50">   </h1></td>
 	<td><h1><img src="img\love.png" alt="love" height="50" width="50"> +1</h1></td>
@@ -152,7 +151,7 @@ table{position:absolute;top: 20px;left:10px;}
 	}
 	?>
 	
-<tr/>
+</tr>
 <tr>
 	<td><h1><img src="img\land.png" alt="land" height="50" width="50">   </h1></td>
 	<td>	</td>
@@ -167,26 +166,27 @@ table{position:absolute;top: 20px;left:10px;}
 	}
 	?>
 	
-<tr/>
+</tr>
+</table>
 <?php
 $userid=$_SESSION['uID'];
 $sql = "select * from user where id='".$userid."';";
 $results=mysqli_query($conn,$sql);
+
 if ($rs=mysqli_fetch_array($results)) {
 ?>
-</table>
 <div id="menu"  >
-	<p><h1><img src="img\coin.png" alt="coin" height="150" width="150"></h1></p>
+	<p><img src="img\coin.png" alt="coin" height="150" width="150"></p>
 	<p><h1>NT <?php echo $rs['cashinhand']; ?></h1> </p>
-	<p><h1><img id="opener" src="img\package.png" alt="package" class="package" height="150" width="150"></h1></p>
-	<p><h1><a href="02.list.php"><img src="img\homeicon.png" alt="homeicon" height="150" width="150"></h1></p>
-    
-	</div>
+	<p><img id="opener" src="img\package.png" alt="package" class="package" height="150" width="150"></p>
+	<p><a href="02.list.php"><img src="img\homeicon.png" alt="homeicon" height="150" width="150"></p>    
+</div>
 <?php
 }
 ?>
-<div id="dialog" title="背包" > <!--背包的內容-->
-<table width="900">
+
+<div id="dialog" title="背包" height="100"> <!--背包的內容-->
+<table>
 <tr>
 	<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 	</br>
@@ -196,14 +196,16 @@ if ($rs=mysqli_fetch_array($results)) {
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['item_time'];
-	?></br>
+	?>
+	</br>
 	數量：
 	<?php
 	$sql = "select carrot_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['carrot_qty'];
-	?></br>
+	?>
+	</br>
 	出售價：
 	<?php
 	$sql ="select item_outprice from package where id='1';";
@@ -220,14 +222,16 @@ if ($rs=mysqli_fetch_array($results)) {
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['item_time'];
-	?></br>
+	?>
+	</br>
 	數量：
 	<?php
 	$sql = "select mushroom_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['mushroom_qty'];
-	?></br>
+	?>
+	</br>
 	出售價：
 	<?php
 	$sql ="select item_outprice from package where id='2';";
@@ -244,14 +248,16 @@ if ($rs=mysqli_fetch_array($results)) {
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['item_time'];
-	?></br>
+	?>
+	</br>
 	數量：
 	<?php
 	$sql = "select eggplant_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['eggplant_qty'];
-	?></br>
+	?>
+	</br>
 	出售價：
 	<?php
 	$sql ="select item_outprice from package where id='3';";
@@ -268,14 +274,16 @@ if ($rs=mysqli_fetch_array($results)) {
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['item_time'];
-	?></br>
+	?>
+	</br>
 	數量：
 	<?php
 	$sql = "select corn_qty from user where id='".$userid."';";
 	$results=mysqli_query($conn,$sql);
 	$rs=mysqli_fetch_array($results);
 	echo $rs['corn_qty'];
-	?></br>
+	?>
+	</br>
 	出售價：
 	<?php
 	$sql ="select item_outprice from package where id='4';";
