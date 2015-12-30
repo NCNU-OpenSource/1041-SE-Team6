@@ -4,8 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>註冊</title>
 </head>
-<body>
-<p>新手註冊 </p>
+<style type="text/css">
+h1 {padding:5px;  text-align: center}
+body {width: 300px;
+ margin:100px auto;
+ font-size:14pt;
+ background-image:url(img/p1.jpg);
+ background-attachment:fixed;
+ }
+ </style>
+<body >
+<p><h1>新手註冊 </h1></p>
 
 
 
@@ -14,7 +23,8 @@
   <h1>密碼 : <input type="text" name="password"><br /></h1>
   <h1>性別 : <input type="radio" name="sex" value="m"/> 男
 			<input type="radio" name="sex" value="f"/> 女 </h1>
-	<input type="submit" value="註冊">
+	<h1><input type="submit" value="註冊"></h1>
+	<h1><a href="login.php">回登入畫面</a></h1>
 
 
 </body>
