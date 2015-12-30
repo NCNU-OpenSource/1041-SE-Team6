@@ -15,8 +15,8 @@ require("config.php");
 
 h1 { text-align: center}
 body {background-size: cover;} /*背景滿版*/
-table{position:absolute;top: 120px;left:10px;}
-#menu{position:absolute;top:100px;left:1100px; }
+table{position:absolute;top: 20px;left:10px;}
+#menu{position:absolute;top:60px;left:1100px; }
 </style>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -186,7 +186,7 @@ if ($rs=mysqli_fetch_array($results)) {
 }
 ?>
 <div id="dialog" title="背包" > <!--背包的內容-->
-<table width="800">
+<table>
 <tr>
 	<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
 	</br>
