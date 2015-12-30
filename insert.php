@@ -4,11 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>註冊</title>
 </head>
-
-<body>
-
-
-
+<style type="text/css">
+h1 {padding:5px;  text-align: center}
+body {width: 300px;
+ margin:100px auto;
+ font-size:14pt;
+ 
+ background-attachment:fixed;
+ }
+ </style>
+<body  style="background-image:url(img/p1.jpg)">
 <p>
   <?php
 $host = 'localhost';
@@ -25,14 +30,14 @@ $sex=mysqli_real_escape_string($conn,$_POST['sex']);
 if ($id) {
 	$sql = "insert into user (id, password, sex) values ('$id', '$password', '$sex');";
 	mysqli_query($conn,$sql) or die("MySQL insert message error"); //執行SQL
-	echo "註冊成功  恭喜您成為正式玩家~.";
+	echo "<h1>註冊成功  恭喜您成為正式玩家~.</h1>";
 	
 } else {
-	echo "註冊失敗,請重新註冊一次.";
+	echo "<h1>註冊失敗,請重新註冊一次.</h1>";
 }
 ?>
 </p>
-<p><a href="addform.php">回註冊畫面</a> </p>
-<p><a href="login.php">回登入畫面</a> </p>
+<h1><a href="addform.php">回註冊畫面</a><h1>
+<h1><a href="login.php">回登入畫面</a><h1>
 </body>
 </html>
