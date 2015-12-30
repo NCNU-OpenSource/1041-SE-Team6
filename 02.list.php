@@ -49,7 +49,7 @@ h1 {padding:5px;  text-align: center}
  body {
 	position:fixed ;
  left:10px; 
- margin:20px auto; 
+ margin:30px auto; 
  }
 
  .shop{
