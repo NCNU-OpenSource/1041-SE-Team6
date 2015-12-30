@@ -24,6 +24,18 @@ h1 {padding:5px;  text-align: center}
 #package{position:fixed;top:300px;left:200px; }
 #time1{position:fixed;top:250px;left:650px; }
 #time2{position:fixed;top:250px;left:750px; }
+#time3{position:fixed;top:250px;left:850px; }
+#time4{position:fixed;top:250px;left:950px; }
+#time5{position:fixed;top:350px;left:650px; }
+#time6{position:fixed;top:350px;left:750px; }
+#time7{position:fixed;top:350px;left:850px; }
+#time8{position:fixed;top:350px;left:950px; }
+#time9{position:fixed;top:450px;left:650px; }
+#time10{position:fixed;top:450px;left:750px; }
+#time11{position:fixed;top:450px;left:850px; }
+#time12{position:fixed;top:450px;left:950px; }
+
+
  body {
   width: 480px ;
  margin:175px auto; 
@@ -76,6 +88,282 @@ function start1() {
 
 	new Countdown({
 		selector: '.timer1',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+</script>
+<?php
+$sqlb= "select * from land where id=2";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start2() {
+
+	new Countdown({
+		selector: '.timer2',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=3";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start3() {
+
+	new Countdown({
+		selector: '.timer3',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=4";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start4() {
+
+	new Countdown({
+		selector: '.timer4',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=5";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start5() {
+
+	new Countdown({
+		selector: '.timer5',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=6";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start6() {
+
+	new Countdown({
+		selector: '.timer6',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=7";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start7() {
+
+	new Countdown({
+		selector: '.timer7',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=8";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start8() {
+
+	new Countdown({
+		selector: '.timer8',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=9";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start9() {
+
+	new Countdown({
+		selector: '.timer9',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=10";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start10() {
+
+	new Countdown({
+		selector: '.timer10',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=11";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start11() {
+
+	new Countdown({
+		selector: '.timer11',
+		msgBefore: "",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
+		msgPattern: "{seconds}",
+		dateStart: new Date(),
+		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
+		onStart: function() {
+            console.log('start');
+            },
+		onEnd: function() { 
+            console.log('end');
+            },
+	});
+
+}
+</script>
+<?php
+$sqlb= "select * from land where id=12";
+$resultsb=mysqli_query($conn,$sqlb);
+$rsb=mysqli_fetch_array($resultsb);
+?>
+<script>
+function start12() {
+
+	new Countdown({
+		selector: '.timer12',
 		msgBefore: "",
 		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
@@ -312,8 +600,21 @@ $(function() {
 
 <body  style="background-color:#63FF63" >
 
-<h1><div style="z-index:1000;" id="time1" class="timer1"></div></h1>
-<h1><div style="z-index:1000;" id="time2" class="timer2"></div></h1>
+<h1><div style="z-index:10;" id="time1" class="timer1"></div></h1>
+<h1><div style="z-index:10;" id="time2" class="timer2"></div></h1>
+<h1><div style="z-index:10;" id="time3" class="timer3"></div></h1>
+<h1><div style="z-index:10;" id="time4" class="timer4"></div></h1>
+<h1><div style="z-index:10;" id="time5" class="timer5"></div></h1>
+<h1><div style="z-index:10;" id="time6" class="timer6"></div></h1>
+<h1><div style="z-index:10;" id="time7" class="timer7"></div></h1>
+<h1><div style="z-index:10;" id="time8" class="timer8"></div></h1>
+<h1><div style="z-index:10;" id="time9" class="timer9"></div></h1>
+<h1><div style="z-index:10;" id="time10" class="timer10"></div></h1>
+<h1><div style="z-index:10;" id="time11" class="timer11"></div></h1>
+<h1><div style="z-index:10;" id="time12" class="timer12"></div></h1>
+
+
+
 
 <?php
 $userid=$_SESSION['uID'];
@@ -536,7 +837,7 @@ if($rsui['sex']=='m'){
 		?>
 			<img id="open_menu" src="img\grass.png" height="100" width="100">
 		
-			<div id="grow" title="可種植" > <!--可種植的內容-->
+			<div  id="grow" title="可種植" > <!--可種植的內容-->
 			<table width="300">
 			<tr>
 				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
@@ -681,19 +982,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
-				echo "<script>start()</script>";
+				echo "<script>start2()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
-				echo "<script>start()</script>";
+				echo "<script>start2()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
-				echo "<script>start()</script>";
+				echo "<script>start2()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
-				echo "<script>start()</script>";
+				echo "<script>start2()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
@@ -769,15 +1070,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start3()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start3()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start3()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start3()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
@@ -853,15 +1158,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start4()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start4()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start4()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start4()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
@@ -939,18 +1248,23 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start5()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start5()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start5()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start5()</script>";
 			}
 			else{
-				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">";
+                echo "<script>start5()</script>";				
 			}
 		}
 	?></td>
@@ -1023,18 +1337,23 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start6()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start6()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start6()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start6()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
+				echo "<script>start6()</script>";
 			}
 		}
 	?></td>
@@ -1107,15 +1426,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start7()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start7()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start7()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start7()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
@@ -1191,15 +1514,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start8()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start8()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start8()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start8()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
@@ -1277,15 +1604,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start9()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start9()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start9()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start9()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
@@ -1361,15 +1692,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start10()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start10()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start10()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start10()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
@@ -1445,15 +1780,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start11()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start11()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start11()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start11()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
@@ -1529,15 +1868,19 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start12()</script>";
 			}
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start12()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start12()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
+				echo "<script>start12()</script>";
 			}
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
