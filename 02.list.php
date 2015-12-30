@@ -67,20 +67,17 @@ window.onload=function() {
 };
 </script>
 <?php
-$sqla= "select count(*) as c from land where status=2";
-$resultsa=mysqli_query($conn,$sqla);
-$rsa=mysqli_fetch_array($resultsa);
-$sqlb= "select * from land where status=2";
+$sqlb= "select * from land where id=1";
 $resultsb=mysqli_query($conn,$sqlb);
 $rsb=mysqli_fetch_array($resultsb);
 ?>
 <script>
-function start() {
+function start1() {
 
 	new Countdown({
 		selector: '.timer1',
 		msgBefore: "",
-		msgAfter: "<?php echo "<img src='img/crop.png' height='100' width='100'>";?>",
+		msgAfter: "<?php echo "<a href='harvest.php?iid=".$rsb['item_onland']." &lid=".$rsb['id']."'><img src='img/crop.png' height='100' width='100'>";?>",
 		msgPattern: "{seconds}",
 		dateStart: new Date(),
 		dateEnd:new Date('<?php echo date("M d, Y H:i:s",$rsb['endtime'])?>'),
@@ -549,7 +546,6 @@ if($rsui['sex']=='m'){
 				$results=mysqli_query($conn,$sqlc);
 				if ($rsc=mysqli_fetch_array($results)) {
 				echo"<a href='down_package.php?id=",$rsc['id']," &lid=",$rs['id'],"'>使用</a>";
-				
 				}
 				?>	
 				</td>
@@ -595,22 +591,21 @@ if($rsui['sex']=='m'){
 		else if($rs['status']=='2'){ //種植中
 			if($rs['item_onland']=='1'){
 				echo "<img src=\"img\\carrot_grow.png\" height=\"100\" width=\"100\">";
-				echo "<script>start()</script>";        
+				echo "<script>start1()</script>";        
 			}
 			
 			else if($rs['item_onland']=='2'){
 				echo "<img src=\"img\\mushroom_grow.png\" height=\"100\" width=\"100\">";
-				echo "<script>start()</script>";
+				echo "<script>start1()</script>";
 			}
 			else if($rs['item_onland']=='3'){
 				echo "<img src=\"img\\eggplant_grow.png\" height=\"100\" width=\"100\">";
-				echo "<script>start()</script>";
+				echo "<script>start1()</script>";
 			}
 			else if($rs['item_onland']=='4'){
 				echo "<img src=\"img\\corn_grow.png\" height=\"100\" width=\"100\">";
-				echo "<script>start()</script>";
+				echo "<script>start1()</script>";
 			}
-		
 			else{
 				echo "<img src=\"img\\grass.png\" height=\"100\" width=\"100\">"; 
 			}
