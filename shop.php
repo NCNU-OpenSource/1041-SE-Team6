@@ -14,7 +14,11 @@ require("config.php");
 <style type="text/css">
 
 h1 { text-align: center}
-body {background-size: cover;} /*背景滿版*/
+body {
+	background-image:url(img\\p4.png);
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+} 
 table{position:absolute;top: 20px;left:10px;}
 #menu{position:absolute;top:60px;left:1100px;}
 </style>
@@ -42,7 +46,7 @@ table{position:absolute;top: 20px;left:10px;}
   
 </script>
 
-<body style="background-image:url(img\\p4.png)">
+<body>
 <table  width="1000" height="200">
 <tr>
 	<td><h1><img src="img\carrot.png" alt="carrot" height="50" width="50">10秒</h1></td>
