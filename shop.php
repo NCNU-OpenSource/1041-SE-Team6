@@ -43,7 +43,7 @@ table{position:absolute;top: 120px;left:10px;}
 </script>
 
 <body style="background-image:url(img\\p4.png)">
-<table  width="950" height="100">
+<table  width="1000" height="200">
 
 <tr>
 	<td><h1><img src="img\carrot.png" alt="carrot" height="50" width="50">10秒</h1></td>
@@ -52,11 +52,15 @@ table{position:absolute;top: 120px;left:10px;}
 	<td><h1><img src="img\exp.png" alt="exp" height="50" width="50">+30</h1></td>
 	<td><h1>30元</h1></td>
 	<?php
+	
+		
 	$sqlc = "select * from package where id='1';";
-	$results=mysqli_query($conn,$sqlc);
+	$results=mysqli_query($conn,$sqlc);	
 	if ($rs=mysqli_fetch_array($results)) {
+		
 	echo"<td><h1><a href='up_package.php?id=",$rs['id'],"'>購買</a></h1></td>";
 	}
+	
 	?>	
 <tr/>
 <tr>
@@ -66,11 +70,24 @@ table{position:absolute;top: 120px;left:10px;}
 	<td><h1><img src="img\exp.png" alt="exp" height="50" width="50">+50</h1></td>
 	<td><h1>60元</h1></td>
 	<?php
+	
+	$userid=$_SESSION['uID'];
+	$sqluser = "select * from user where id='".$userid."' ;";
+    $rsuser=mysqli_query($conn,$sqluser);
+    $rsu=mysqli_fetch_array($rsuser);
+	 
+	if($rsu['level']>='3'){
+	
 	$sqlc = "select * from package where id='2';";
 	$results=mysqli_query($conn,$sqlc);
 	if ($rs=mysqli_fetch_array($results)) {
 	echo"<td><h1><a href='up_package.php?id=",$rs['id'],"'>購買</a></h1></td>";
 	}
+	}
+	else{
+		echo"<td><h1>未解鎖</h1></td>";
+	}
+	
 	?>
 <tr/>
 <tr>
@@ -80,10 +97,20 @@ table{position:absolute;top: 120px;left:10px;}
 	<td><h1><img src="img\exp.png" alt="exp" height="50" width="50">+60</h1></td>
 	<td><h1>70元</h1></td>
 	<?php
+	$userid=$_SESSION['uID'];
+	$sqluser = "select * from user where id='".$userid."' ;";
+    $rsuser=mysqli_query($conn,$sqluser);
+    $rsu=mysqli_fetch_array($rsuser);
+	 
+	if($rsu['level']>='5'){
 	$sqlc = "select * from package where id='3';";
 	$results=mysqli_query($conn,$sqlc);
 	if ($rs=mysqli_fetch_array($results)) {
 	echo"<td><h1><a href='up_package.php?id=",$rs['id'],"'>購買</a></h1></td>";
+	}
+	}
+	else{
+		echo"<td><h1>未解鎖</h1></td>";
 	}
 	?>
 <tr/>
@@ -94,10 +121,20 @@ table{position:absolute;top: 120px;left:10px;}
 	<td><h1><img src="img\exp.png" alt="exp" height="50" width="50">+80</h1></td>
 	<td><h1>90元</h1></td>
 	<?php
+	$userid=$_SESSION['uID'];
+	$sqluser = "select * from user where id='".$userid."' ;";
+    $rsuser=mysqli_query($conn,$sqluser);
+    $rsu=mysqli_fetch_array($rsuser);
+	 
+	if($rsu['level']>='9'){
 	$sqlc = "select * from package where id='4';";
 	$results=mysqli_query($conn,$sqlc);
 	if ($rs=mysqli_fetch_array($results)) {
 	echo"<td><h1><a href='up_package.php?id=",$rs['id'],"'>購買</a></h1></td>";
+	}
+	}
+	else{
+		echo"<td><h1>未解鎖</h1></td>";
 	}
 	?>
 <tr/>
