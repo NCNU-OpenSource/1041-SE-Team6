@@ -44,12 +44,12 @@ if ($result = mysqli_query($conn,$sql)) {
 <style type="text/css">
 h1 {padding:5px;  text-align: center}
 body {width: 550px;
- margin:150px auto;
+ margin:90px auto;
  font-size:14pt;
- background-image:url(img\\p1.png);
+ background-image:url(img/p1.jpg);
  background-attachment:fixed;
  }
-#content {color:red; background-color:#82FF82; border:5px solid black; padding:15px}
+#content {color:black; }
  
 input {font-size:20pt}
 </style>
