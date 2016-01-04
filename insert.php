@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -27,17 +30,34 @@ mysqli_query($conn,"SET NAMES utf8"); //選擇編碼
 $id=mysqli_real_escape_string($conn,$_POST['id']);
 $password=mysqli_real_escape_string($conn,$_POST['password']);
 $sex=mysqli_real_escape_string($conn,$_POST['sex']);
-if ($id) {
-	$sql = "insert into user (id, password, sex) values ('$id', '$password', '$sex');";
-	mysqli_query($conn,$sql) or die("MySQL insert message error"); //執行SQL
-	echo "<h1>註冊成功  恭喜您成為正式玩家~.</h1>";
-	
-} else {
-	echo "<h1>註冊失敗,請重新註冊一次.</h1>";
+
+for($i=1;$i<=50;$i++){
+	$sql= "select * from user ";
+	if($results=mysqli_query($conn,$sql)){
+		$rs=mysqli_fetch_array($results);
+		$username=(string)$rs['id'];
+		$nian=strcmp($id,$username);
+		if($nian==0){
+			$nianle=1;
+		}
+	}
+}
+if($id==""||$password==""||$sex==""){
+	$_SESSION['kosong']= 1;
+	header("Location:register.php");
+}
+else{
+	if($nianle==1){
+		$_SESSION['rep']= 1;
+		header("Location:register.php");
+	}
+	else{
+		$sql = "insert into user (id, password, sex) values ('$id', '$password', '$sex');";
+		mysqli_query($conn,$sql) or die("MySQL insert message error"); //執行SQL
+		$_SESSION['sus']= 1;	
+		header("Location:login.php");
+	}
 }
 ?>
-</p>
-<h1><a href="addform.php">回註冊畫面</a><h1>
-<h1><a href="login.php">回登入畫面</a><h1>
 </body>
 </html>

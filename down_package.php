@@ -110,7 +110,7 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 	header("Location: 02.list.php");
 }
 else{
-	$_SESSION['Love'] = 'nolove';
+	$_SESSION['Love'] = 1;
 	header("Location: 02.list.php");
 }
 if($id=='5' && $rsu['meat_qty']>='1'){

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2015 年 12 月 27 日 17:01
+-- 產生時間： 2016 年 01 月 04 日 11:20
 -- 伺服器版本: 5.6.26
 -- PHP 版本： 5.6.12
 
@@ -30,8 +30,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `id` varchar(15) COLLATE utf8_bin NOT NULL,
   `password` varchar(15) COLLATE utf8_bin NOT NULL,
   `sex` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cashinhand` int(11) NOT NULL DEFAULT '100',
-  `lovecount` int(11) NOT NULL DEFAULT '5',
+  `cashinhand` int(11) NOT NULL DEFAULT '200',
+  `lovecount` int(11) NOT NULL DEFAULT '10',
   `level` int(11) NOT NULL DEFAULT '1',
   `exp` int(11) NOT NULL DEFAULT '0',
   `carrot_qty` int(11) NOT NULL DEFAULT '0',
@@ -47,9 +47,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `password`, `sex`, `cashinhand`, `lovecount`, `level`, `exp`, `carrot_qty`, `mushroom_qty`, `eggplant_qty`, `corn_qty`, `meat_qty`, `land_qty`) VALUES
-('111', '111', 'm', 100, 5, 5, 10, 4, 5, 5, 5, 7, 2),
-('222', '222', 'f', 60, 3, 3, 0, 0, 0, 0, 0, 0, 0),
-('william', 'william', 'm', 40, 2, 4, 0, 0, 0, 0, 0, 0, 0);
+('111', '111', 'm', 200, 10, 25, 80, 70, 87, 94, 95, 95, 72);
 
 --
 -- 已匯出資料表的索引

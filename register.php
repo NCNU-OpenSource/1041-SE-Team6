@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(isset ($_SESSION['kosong'])){
+	unset($_SESSION['kosong']);
+	echo "<script>alert('Empty input~!');</script>";	
+}
+if(isset ($_SESSION['rep'])){
+	unset($_SESSION['rep']);
+	echo "<script>alert('賬號重複');</script>";	
+}
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

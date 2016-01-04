@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset ($_SESSION['sus'])){
+	unset($_SESSION['sus']);
+	echo "<script>alert('註冊成功');</script>";	
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,7 +14,6 @@
 
 <body>
 <?php
-session_start();
 $host = 'localhost';
 $user = 'myid';
 $pass = '12345';
@@ -65,7 +71,7 @@ input {font-size:20pt}
 <h1>密碼 : <input type="password" name="pwd"><br /></h1>
 
 <h1><input type="submit" value="登入">
-<a href="addform.php">註冊</a> </p>
+<a href="register.php">註冊</a> </p>
 </h1>
 </form>
 </div>
