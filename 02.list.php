@@ -1,5 +1,10 @@
 <?php 
 require("config.php");
+
+if(isset ($_SESSION['Love'])){
+	unset($_SESSION['Love']);
+	echo "<script>alert('愛心不足哦');</script>";
+}	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

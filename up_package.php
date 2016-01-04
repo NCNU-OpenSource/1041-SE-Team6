@@ -55,7 +55,8 @@ if($rsu['cashinhand']>=$rsp['item_price']){ //檢查夠不夠錢
 		header("Location: shop.php");
 	}
 }else{
-header("Location: shop.php");
+	$_SESSION['Money'] = 'nomoney';
+	header("Location: shop.php");
 }
 ?>
 </body>

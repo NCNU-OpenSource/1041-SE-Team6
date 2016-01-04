@@ -106,28 +106,30 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		$sqlat="update land set endtime=$time+".$rsc['item_time']." where id='".$lid."';";
 		mysqli_query($conn,$sqlat)or die("MySQL query error");
 		header("Location:02.list.php");
-	}
-	else if($id=='5' && $rsu['meat_qty']>='1'){
-		$sql ="update user set lovecount=lovecount+'1' where id='".$userid."';"; //user的心增加
-		mysqli_query($conn,$sql) or die("MySQL query error");
-		$sql= "update user set meat_qty=meat_qty-1 where id='".$userid."';";//meat數量減少
-		mysqli_query($conn,$sql) or die("MySQL query error");
-		$sql= "update land set status='2' where id='".$lid."';"; //將land的status設為2(種植中)
-		mysqli_query($conn,$sql) or die("MySQL query error");
-		header("Location: 02.list.php");
-	}
-	else if($id=='6' && $rsu['land_qty']>='1'){
-		$sql= "update user set land_qty=land_qty-1 where id='".$userid."';";//land數量減少
-		mysqli_query($conn,$sql) or die("MySQL query error");
-		$sql= "update land set status='1' where id='".$lid."';"; //將land的status設為1(可種植)
-		mysqli_query($conn,$sql) or die("MySQL query error");
-		header("Location: 02.list.php");
-	}
+	} 
 	header("Location: 02.list.php");
 }
 else{
+	$_SESSION['Love'] = 'nolove';
 	header("Location: 02.list.php");
 }
+if($id=='5' && $rsu['meat_qty']>='1'){
+	$sql ="update user set lovecount=lovecount+'1' where id='".$userid."';"; //user的心增加
+	mysqli_query($conn,$sql) or die("MySQL query error");
+	$sql= "update user set meat_qty=meat_qty-1 where id='".$userid."';";//meat數量減少
+	mysqli_query($conn,$sql) or die("MySQL query error");
+	$sql= "update land set status='2' where id='".$lid."';"; //將land的status設為2(種植中)
+	mysqli_query($conn,$sql) or die("MySQL query error");
+	header("Location: 02.list.php");
+}
+if($id=='6' && $rsu['land_qty']>='1'){
+	$sql= "update user set land_qty=land_qty-1 where id='".$userid."';";//land數量減少
+	mysqli_query($conn,$sql) or die("MySQL query error");
+	$sql= "update land set status='1' where id='".$lid."';"; //將land的status設為1(可種植)
+	mysqli_query($conn,$sql) or die("MySQL query error");
+	header("Location: 02.list.php");
+}
+
 
 	
 ?>

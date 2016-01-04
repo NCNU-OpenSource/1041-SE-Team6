@@ -1,5 +1,10 @@
 <?php 
 require("config.php");
+
+if(isset ($_SESSION['Money'])){
+	unset($_SESSION['Money']);
+	echo "<script>alert('金錢不夠啦');</script>";	
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
