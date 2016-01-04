@@ -93,7 +93,7 @@ table{position:absolute;top: 20px;left:10px;}
 	}
 	}
 	else{
-		echo"<td><h1>未解鎖</h1></td>";
+		echo"<td><h1>LV.3解鎖</h1></td>";
 	}
 	
 	?>
@@ -118,7 +118,7 @@ table{position:absolute;top: 20px;left:10px;}
 	}
 	}
 	else{
-		echo"<td><h1>未解鎖</h1></td>";
+		echo"<td><h1>LV.5解鎖</h1></td>";
 	}
 	?>
 </tr>
@@ -142,7 +142,7 @@ table{position:absolute;top: 20px;left:10px;}
 	}
 	}
 	else{
-		echo"<td><h1>未解鎖</h1></td>";
+		echo"<td><h1>LV.9解鎖</h1></td>";
 	}
 	?>
 </tr>
