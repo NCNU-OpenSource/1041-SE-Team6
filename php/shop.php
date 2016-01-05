@@ -24,7 +24,7 @@ body {
 	background-attachment:fixed;
 	background-repeat: no-repeat;
 } 
-table{position:absolute;top: 20px;left:10px;}
+#package{position:absolute;top: 20px;left:10px;}
 #menu{position:absolute;top:60px;left:1100px;}
 </style>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -52,6 +52,7 @@ table{position:absolute;top: 20px;left:10px;}
 </script>
 
 <body>
+
 <table  width="1000" height="200">
 <tr>
 	<td><h1><img src="img\carrot.png" alt="carrot" height="50" width="50">10秒</h1></td>
@@ -197,7 +198,7 @@ if ($rs=mysqli_fetch_array($results)) {
 <div id="dialog" title="背包" height="100"> <!--背包的內容-->
 <table>
 <tr>
-	<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
+	<td><img src="img\carrot.png" alt="carrot" height="150" width="150"> 
 	</br>
 	種植時間：
 	<?php
@@ -223,7 +224,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['item_outprice'];
 	?>
 	</td>
-	<td><img src="img\mushroom.png" alt="mushroom" height="100" width="100">
+	<td><img src="img\mushroom.png" alt="mushroom" height="150" width="150">
 	</br>
 	種植時間：
 	<?php
@@ -249,7 +250,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['item_outprice'];
 	?>
 	</td>	
-	<td><img src="img\eggplant.png" alt="eggplant" height="100" width="100">
+	<td><img src="img\eggplant.png" alt="eggplant" height="150" width="150">
 	</br>
 	種植時間：
 	<?php
@@ -275,7 +276,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['item_outprice'];
 	?>
 	</td>
-	<td><img src="img\corn.png" alt="corn" height="100" width="100">
+	<td><img src="img\corn.png" alt="corn" height="150" width="150">
 	</br>
 	種植時間：
 	<?php
@@ -301,7 +302,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['item_outprice'];
 	?>	
 	</td>
-	<td><img src="img\meat.png" alt="meat" height="100" width="100">
+	<td><img src="img\meat.png" alt="meat" height="150" width="150">
 	</br>
 	數量：
 	<?php
@@ -311,7 +312,7 @@ if ($rs=mysqli_fetch_array($results)) {
 	echo $rs['meat_qty'];
 	?>	
 	</td>
-	<td><img src="img\land.png" alt="land" height="100" width="100">
+	<td><img src="img\land.png" alt="land" height="150" width="150">
 	</br>
 	數量：
 	<?php
