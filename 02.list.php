@@ -8,6 +8,7 @@ if(isset ($_SESSION['Love'])){
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,13 +50,20 @@ h1 {padding:5px;  text-align: center}
     font-size: 20pt
     text-align:center;
 }  
-
+#up{
+	z-index:100;
+    position:fixed;
+    top: 80px;
+    left:450px;
+    font-size: 90pt
+    text-align:center;
+}  
  body {
 	position:fixed ;
  left:10px; 
  margin:30px auto; 
  }
-
+ 
  .shop{
 position:absolute;
 }
@@ -604,10 +612,23 @@ $(function() {
       $( "#grow12" ).dialog( "open" );
     });
   });  
+  
+  
+
+  
+  
+  
 </script>
 
 
 <body>
+
+
+
+	
+	
+
+
 
 <h1><div style="z-index:10;" id="time1" class="timer1"></div></h1>
 <h1><div style="z-index:10;" id="time2" class="timer2"></div></h1>
@@ -629,11 +650,15 @@ $rsui=mysqli_fetch_array($resultsui);
 if($rsui['exp']>=100){
 	$sql ="update user set level=level+'1' where id='".$userid."';";
 	mysqli_query($conn,$sql) or die("MySQL query error"); 
+	
 	$sql ="update user set exp=exp-'100' where id='".$userid."';";
 	mysqli_query($conn,$sql) or die("MySQL query error");
-	echo "<script> window.location='02.list.php';</script>";
-}
-?>
+	//echo "<script> window.location='02.list.php';</script>";	
+	echo "<img id=\"up\" src=\"img\star.png\" alt=\"up\" class=\"up\" height=\"500\" width=\"500\">";
+	echo "<meta http-equiv=\"refresh\" content=\"1\">";
+	
+}                                 
+?>               
 <div id="lv">LV.</div>
 <h1><?php
     $id=$_SESSION['uID'];
@@ -836,6 +861,7 @@ if($rsui['sex']=='m'){
 			<table width="300">
 			<tr>
 				<td><img src="img\carrot.png" alt="carrot" height="100" width="100"> 
+				
 				</br>
 				<?php
 				$sqlc = "select * from package where id='1';";
