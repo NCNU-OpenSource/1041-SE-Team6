@@ -106,7 +106,7 @@ if($rsu['lovecount']>=$rsp['item_hp']){ //檢查夠不夠心
 		$sqlat="update land set endtime=$time+".$rsc['item_time']." where id='".$lid."';";
 		mysqli_query($conn,$sqlat)or die("MySQL query error");
 		header("Location:02.list.php");
-	} 
+	}
 	header("Location: 02.list.php");
 }
 else{
@@ -129,7 +129,6 @@ if($id=='6' && $rsu['land_qty']>='1'){
 	mysqli_query($conn,$sql) or die("MySQL query error");
 	header("Location: 02.list.php");
 }
-
 
 	
 ?>

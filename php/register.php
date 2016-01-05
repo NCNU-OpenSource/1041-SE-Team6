@@ -2,7 +2,7 @@
 session_start();
 if(isset ($_SESSION['kosong'])){
 	unset($_SESSION['kosong']);
-	echo "<script>alert('Empty input~!');</script>";	
+	echo "<script>alert('請不要空著不輸入~!');</script>";	
 }
 if(isset ($_SESSION['rep'])){
 	unset($_SESSION['rep']);
