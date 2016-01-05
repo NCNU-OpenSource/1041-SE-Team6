@@ -623,13 +623,6 @@ $(function() {
 
 <body>
 
-
-
-	
-	
-
-
-
 <h1><div style="z-index:10;" id="time1" class="timer1"></div></h1>
 <h1><div style="z-index:10;" id="time2" class="timer2"></div></h1>
 <h1><div style="z-index:10;" id="time3" class="timer3"></div></h1>
