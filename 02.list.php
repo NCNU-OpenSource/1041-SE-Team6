@@ -4,7 +4,31 @@ require("config.php");
 if(isset ($_SESSION['Love'])){
 	unset($_SESSION['Love']);
 	echo "<script>alert('愛心不足哦');</script>";
-}	
+}
+if(isset ($_SESSION['carq'])){
+	unset($_SESSION['carq']);
+	echo "<script>alert('蘿蔔不夠了');</script>";
+}
+if(isset ($_SESSION['musq'])){
+	unset($_SESSION['musq']);
+	echo "<script>alert('蘑菇不夠了');</script>";
+}
+if(isset ($_SESSION['eggq'])){
+	unset($_SESSION['eggq']);
+	echo "<script>alert('茄子不夠了');</script>";
+}
+if(isset ($_SESSION['corq'])){
+	unset($_SESSION['corq']);
+	echo "<script>alert('玉米不夠了');</script>";
+}
+if(isset ($_SESSION['meaq'])){
+	unset($_SESSION['meaq']);
+	echo "<script>alert('雞腿不夠了');</script>";
+}
+if(isset ($_SESSION['lanq'])){
+	unset($_SESSION['lanq']);
+	echo "<script>alert('土地不夠了');</script>";
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
